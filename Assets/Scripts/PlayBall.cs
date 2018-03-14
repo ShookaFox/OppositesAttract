@@ -26,7 +26,7 @@ public class PlayBall : MonoBehaviour
 
         float distanceToBall = Vector3.Distance(ball.transform.position, transform.position);
 
-        
+        agent.SetDestination(desiredDestination);
         if (distanceToBall <= 1.5f)
         {
             if (Vector3.Angle(ballToGoal, this.transform.forward) < 10)
