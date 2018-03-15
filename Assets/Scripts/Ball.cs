@@ -7,10 +7,26 @@ public class Ball : MonoBehaviour {
     public Transform startTransform;
     public int rnearCount = 0;
     public int bnearCount = 0;
+    public AudioClip ballHittingGround;
+
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (GM.currentState == GameState.PLAYING)
+        {
+            audioSource.clip = ballHittingGround;
+            audioSource.Play();
+        }
+    }
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
         if (other.tag == "Goal2")
         {
             scoreboard.redScore++;
@@ -32,18 +48,21 @@ public class Ball : MonoBehaviour {
 
     private void Update()
     {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 8);
-        rnearCount = 0;
-        bnearCount = 0;
-        for (int i = 0; i < hitColliders.Length; i++)
+        if (GM.currentState == GameState.PLAYING)
         {
-            if (hitColliders[i].tag == "red")
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 8);
+            rnearCount = 0;
+            bnearCount = 0;
+            for (int i = 0; i < hitColliders.Length; i++)
             {
-                rnearCount++;
-            }
-            else if (hitColliders[i].tag == "blue")
-            {
-                bnearCount++;
+                if (hitColliders[i].tag == "red")
+                {
+                    rnearCount++;
+                }
+                else if (hitColliders[i].tag == "blue")
+                {
+                    bnearCount++;
+                }
             }
         }
     }

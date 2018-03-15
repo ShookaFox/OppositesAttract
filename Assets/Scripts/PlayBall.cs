@@ -20,22 +20,25 @@ public class PlayBall : MonoBehaviour
     }
 	
 	void Update () {
-        Vector3 ballToGoal = myGoal.position - ball.position;
-
-        Vector3 desiredDestination = ball.position - ballToGoal.normalized;
-
-        float distanceToBall = Vector3.Distance(ball.transform.position, transform.position);
-
-        agent.SetDestination(desiredDestination);
-        if (distanceToBall <= 1.5f)
+        if (GM.currentState == GameState.PLAYING)
         {
-            if (Vector3.Angle(ballToGoal, this.transform.forward) < 10)
+            Vector3 ballToGoal = myGoal.position - ball.position;
+
+            Vector3 desiredDestination = ball.position - ballToGoal.normalized;
+
+            float distanceToBall = Vector3.Distance(ball.transform.position, transform.position);
+
+            agent.SetDestination(desiredDestination);
+            if (distanceToBall <= 1.5f)
             {
-                ball.GetComponent<Rigidbody>().AddForce(this.transform.forward * 20);
-            }
-            else
-            {
-                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(ballToGoal), Time.deltaTime * agent.angularSpeed);
+                if (Vector3.Angle(ballToGoal, this.transform.forward) < 10)
+                {
+                    ball.GetComponent<Rigidbody>().AddForce(this.transform.forward * 20);
+                }
+                else
+                {
+                    this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(ballToGoal), Time.deltaTime * agent.angularSpeed);
+                }
             }
         }
 	}
