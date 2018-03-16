@@ -14,6 +14,7 @@ public class SplashScreen : MonoBehaviour {
     private void Start()
     {
         StartCoroutine(DoTheThing());
+        AudioManager.instance.playMainMenuMusic();
     }
 
     public IEnumerator DoTheThing()

@@ -29,30 +29,35 @@ public class DialogueManager : MonoBehaviour
 
     public void Option1Selected()
     {
+        AudioManager.instance.playButtonClicked();
         dialogueSession.currentID = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[((TextDialogueNode)dialogueSession.dialogueNodes[dialogueSession.currentID]).choices[0]]).next;
         DealWithCurrentNode();
     }
 
     public void Option2Selected()
     {
+        AudioManager.instance.playButtonClicked();
         dialogueSession.currentID = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[((TextDialogueNode)dialogueSession.dialogueNodes[dialogueSession.currentID]).choices[1]]).next;
         DealWithCurrentNode();
     }
 
     public void Option3Selected()
     {
+        AudioManager.instance.playButtonClicked();
         dialogueSession.currentID = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[((TextDialogueNode)dialogueSession.dialogueNodes[dialogueSession.currentID]).choices[2]]).next;
         DealWithCurrentNode();
     }
 
     public void Option4Selected()
     {
+        AudioManager.instance.playButtonClicked();
         dialogueSession.currentID = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[((TextDialogueNode)dialogueSession.dialogueNodes[dialogueSession.currentID]).choices[3]]).next;
         DealWithCurrentNode();
     }
 
     public void Continue()
     {
+        AudioManager.instance.playButtonClicked();
         dialogueSession.currentID = ((TextDialogueNode)dialogueSession.dialogueNodes[dialogueSession.currentID]).next;
         DealWithCurrentNode();
     }
@@ -176,5 +181,10 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
         animator.SetInteger("NumOfOptions", 0);
+    }
+
+    public void PlayButtonHoveredSound()
+    {
+        AudioManager.instance.playButtonHovered();
     }
 }

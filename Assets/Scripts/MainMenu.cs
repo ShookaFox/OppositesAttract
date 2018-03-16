@@ -6,10 +6,29 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public FadeOut fadeOut;
+    public MainMenuMusic mainMenuMusic;
+    public AudioSource audioSource;
 
     private bool tryingToPlay = false;
     private bool tryingToQuit = false;
     private bool tryingToDemoDialogue = false;
+
+    public AudioClip clickSound;
+
+    private void Start()
+    {
+        mainMenuMusic = FindObjectOfType<MainMenuMusic>();
+    }
+
+    public void PlayClickSound()
+    {
+        AudioManager.instance.playButtonClicked();
+    }
+
+    public void PlayHoveredSound()
+    {
+        AudioManager.instance.playButtonHovered();
+    }
 
     public void PlayGame()
     {
@@ -33,14 +52,17 @@ public class MainMenu : MonoBehaviour {
     {
         if (tryingToPlay && fadeOut.finishedFading)
         {
+            AudioManager.instance.pauseMainMenuMusic();
             SceneManager.LoadScene(3);
         }
         if (tryingToDemoDialogue && fadeOut.finishedFading)
         {
+            AudioManager.instance.pauseMainMenuMusic();
             SceneManager.LoadScene(3);
         }
         if (tryingToQuit && fadeOut.finishedFading)
         {
+            AudioManager.instance.pauseMainMenuMusic();
             Application.Quit();
         }
     }

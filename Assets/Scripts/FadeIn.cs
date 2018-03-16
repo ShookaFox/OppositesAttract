@@ -13,7 +13,7 @@ public class FadeIn : MonoBehaviour {
 
     private void Start()
     {
-        
+        fadingImage.color = new Color(fadingImage.color.r, fadingImage.color.b, fadingImage.color.g, a);
     }
 
     private void Update()
