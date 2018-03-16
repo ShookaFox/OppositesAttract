@@ -33,11 +33,11 @@ public class MainMenu : MonoBehaviour {
     {
         if (tryingToPlay && fadeOut.finishedFading)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(3);
         }
         if (tryingToDemoDialogue && fadeOut.finishedFading)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene(3);
         }
         if (tryingToQuit && fadeOut.finishedFading)
         {

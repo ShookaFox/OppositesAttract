@@ -1,0 +1,97 @@
+{
+  "dialogue": [
+    {
+      "type": "Text",
+      "id": "a732b7db-6103-49f8-aa6c-75e640303dd6",
+      "actor": "Sam Hedgehog",
+      "name": "Hey you! I bet you can't beat me at soccer!",
+      "choices": [ "287cda88-9719-4fe4-82e7-9e72a4b825a6", "625ce7a6-a224-40de-8a75-f0cefa40287f" ]
+    },
+    {
+      "type": "Choice",
+      "id": "287cda88-9719-4fe4-82e7-9e72a4b825a6",
+      "title": "Who? Me?",
+      "name": "Who? Me?",
+      "next": "89c921e3-37d2-481e-a86c-91bbb6c5343b"
+    },
+    {
+      "type": "Choice",
+      "id": "625ce7a6-a224-40de-8a75-f0cefa40287f",
+      "title": "Oh, hell yeah I can!",
+      "name": "Oh, hell yeah I can!",
+      "next": "388686db-4804-4234-955f-2ba1d9fda0a6"
+    },
+    {
+      "type": "Text",
+      "id": "89c921e3-37d2-481e-a86c-91bbb6c5343b",
+      "actor": "Sam Hedgehog",
+      "name": "Yeah, you! Ya big dumb dumb. I wanna play you.",
+      "choices": [ "7ed28398-fc76-4619-99da-d502952c5f12", "67cd2bd3-0dd9-4092-85ad-98fa3972627f" ]
+    },
+    {
+      "type": "Choice",
+      "id": "7ed28398-fc76-4619-99da-d502952c5f12",
+      "title": "Why? I suck.",
+      "name": "Why? I suck.",
+      "next": "2ac2250c-f07d-4c03-8cd0-4720238f9c3b"
+    },
+    {
+      "type": "Choice",
+      "id": "67cd2bd3-0dd9-4092-85ad-98fa3972627f",
+      "title": "I don't really like soccer.",
+      "name": "I don't really like soccer.",
+      "next": "846001b9-39f4-408b-b1e8-8ef7b828f5c8"
+    },
+    {
+      "type": "Set",
+      "id": "2ac2250c-f07d-4c03-8cd0-4720238f9c3b",
+      "variable": "samIsFeelingFlirty",
+      "value": "true",
+      "next": "9d028151-6416-4ae0-b674-2c7800a09af0"
+    },
+    {
+      "type": "Set",
+      "id": "846001b9-39f4-408b-b1e8-8ef7b828f5c8",
+      "variable": "samIsFeelingFlirty",
+      "value": "false",
+      "next": "e313e2ba-1143-4f94-a9a4-13d2e22c68c4"
+    },
+    {
+      "type": "Action",
+      "id": "da9280dd-53c4-4153-9924-4abb9dbb4f8b",
+      "actor": "",
+      "descname": "Play Soccer",
+      "uniquename": "playSoccer",
+      "desc": "Play Soccer against Sam Hedgehog.",
+      "next": null
+    },
+    {
+      "type": "Text",
+      "id": "9d028151-6416-4ae0-b674-2c7800a09af0",
+      "actor": "Sam Hedgehog",
+      "name": "Oh, come on! I bet you'd be great!",
+      "choices": [ "7010dcef-e20e-48d4-b64f-75c5bd0fbb2d" ]
+    },
+    {
+      "type": "Choice",
+      "id": "7010dcef-e20e-48d4-b64f-75c5bd0fbb2d",
+      "title": "Oh alright. ;)",
+      "name": "Oh alright. ;)",
+      "next": "da9280dd-53c4-4153-9924-4abb9dbb4f8b"
+    },
+    {
+      "type": "Text",
+      "id": "e313e2ba-1143-4f94-a9a4-13d2e22c68c4",
+      "actor": "Sam Hedgehog",
+      "name": "Well that's too bad! We're playing!",
+      "next": "da9280dd-53c4-4153-9924-4abb9dbb4f8b"
+    },
+    {
+      "type": "Text",
+      "id": "388686db-4804-4234-955f-2ba1d9fda0a6",
+      "actor": "Sam Hedgehog",
+      "name": "Okay, let's go!",
+      "next": "da9280dd-53c4-4153-9924-4abb9dbb4f8b"
+    }
+  ]
+}
