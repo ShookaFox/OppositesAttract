@@ -126,6 +126,8 @@ public class CinematicCameraMovementEditor : Editor {
             }
             GUILayout.EndHorizontal();
 
+            EditorGUILayout.FloatField("Seconds to Complete", cm.movements[i].timeToComplete);
+
             GUILayout.Label("Starting Point", h2Style);
             cm.movements[i].point1.position = EditorGUILayout.Vector3Field("Position", cm.movements[i].point1.position);
             cm.movements[i].point1.rotation = EditorGUILayout.Vector3Field("Rotation", cm.movements[i].point1.rotation);

@@ -76,32 +76,36 @@ public class DialogueManager : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(TypeSentence(textDialogueNode.text));
 
-                animator.SetInteger("NumOfOptions", textDialogueNode.choices.Length);
 
-                if (textDialogueNode.choices.Length > 0)
+                if (textDialogueNode.choices == null)
                 {
-                    continueButton.SetActive(false);
-
-                    option1Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[0]]).title;
-
-                    if (textDialogueNode.choices.Length > 1)
-                    {
-                        option2Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[1]]).title;
-                    }
-
-                    if (textDialogueNode.choices.Length > 2)
-                    {
-                        option3Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[2]]).title;
-                    }
-
-                    if (textDialogueNode.choices.Length > 3)
-                    {
-                        option4Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[3]]).title;
-                    }
+                    animator.SetInteger("NumOfOptions", 0);
+                    continueButton.SetActive(true);
                 }
                 else
                 {
-                    continueButton.SetActive(false);
+                    animator.SetInteger("NumOfOptions", textDialogueNode.choices.Length);
+                    if (textDialogueNode.choices.Length > 0)
+                    {
+                        continueButton.SetActive(false);
+
+                        option1Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[0]]).title;
+
+                        if (textDialogueNode.choices.Length > 1)
+                        {
+                            option2Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[1]]).title;
+                        }
+
+                        if (textDialogueNode.choices.Length > 2)
+                        {
+                            option3Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[2]]).title;
+                        }
+
+                        if (textDialogueNode.choices.Length > 3)
+                        {
+                            option4Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[3]]).title;
+                        }
+                    }
                 }
             }
             else if (dialogueNode is SetDialogueNode)
