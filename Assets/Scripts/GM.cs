@@ -12,7 +12,18 @@ public class GM : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        if (currentState == GameState.PLAYING)
+        {
+            Time.timeScale = 1;
+            fpsController.SetActive(true);
+            cinematicCamera.SetActive(false);
+        }
+        else
+        {
+            fpsController.SetActive(false);
+            cinematicCamera.SetActive(true);
+            //Time.timeScale = 0;
+        }
     }
 
     // Update is called once per frame
