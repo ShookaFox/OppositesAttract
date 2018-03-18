@@ -11,6 +11,9 @@ public class Ball : MonoBehaviour {
 
     private AudioSource audioSource;
 
+    public GameObject[] redTeam;
+    public GameObject[] blueTeam;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -50,20 +53,26 @@ public class Ball : MonoBehaviour {
     {
         if (GM.currentState == GameState.PLAYING)
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 8);
             rnearCount = 0;
             bnearCount = 0;
-            for (int i = 0; i < hitColliders.Length; i++)
+            
+            foreach (GameObject rplayer in redTeam)
             {
-                if (hitColliders[i].tag == "red")
+                if (Vector3.Distance(transform.position, rplayer.transform.position) <= 8)
                 {
                     rnearCount++;
                 }
-                else if (hitColliders[i].tag == "blue")
+            }
+
+            foreach (GameObject bplayer in blueTeam)
+            {
+                if (Vector3.Distance(transform.position, bplayer.transform.position) <= 8)
                 {
                     bnearCount++;
                 }
             }
+
+            if ((transform.position.x < -68 || transform.position.x > 68) && (transform.position.z < -4 || transform.position.z > 4)) resetTransform();
         }
     }
 }

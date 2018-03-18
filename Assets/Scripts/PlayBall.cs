@@ -12,10 +12,13 @@ public class PlayBall : MonoBehaviour
     public Transform myGoal;
     public int myTeam;
 
-	void Start () {
+    public float kickLvl1 = 20f;
+    public float kickLvl2 = 40f;
+    public float kickLvl3 = 75f;
+
+    void Start () {
         agent = this.GetComponent<NavMeshAgent>();
-        agent.speed = Random.Range(3.0f, 7.0f);
-        if (Random.Range(0, 7) == 4) agent.speed = Random.Range(7.0f, 17.0f);
+        agent.speed = Random.Range(7.0f, 15.0f);
         startingPos = transform.position;
     }
 	
@@ -28,12 +31,31 @@ public class PlayBall : MonoBehaviour
 
             float distanceToBall = Vector3.Distance(ball.transform.position, transform.position);
 
-            agent.SetDestination(desiredDestination);
+            if ((ball.GetComponent<Ball>().rnearCount < 3 && myTeam == 1) || (ball.GetComponent<Ball>().bnearCount < 3 && myTeam == 2) || Vector3.Distance(transform.position, ball.position) < 2)
+            {
+                agent.SetDestination(desiredDestination);
+            }
+            else
+            {
+                agent.SetDestination(startingPos);
+            }
+            
             if (distanceToBall <= 1.5f)
             {
-                if (Vector3.Angle(ballToGoal, this.transform.forward) < 10)
+                Vector3 vectorToKick = this.transform.forward;
+                vectorToKick.y += 0.15f;
+                float angle = Vector3.Angle(ballToGoal, this.transform.forward);
+                if (angle < 10)
                 {
-                    ball.GetComponent<Rigidbody>().AddForce(this.transform.forward * 20);
+                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl3);
+                }
+                else if (angle < 20)
+                {
+                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl2);
+                }
+                else if (angle < 50)
+                {
+                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl1);
                 }
                 else
                 {

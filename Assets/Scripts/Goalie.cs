@@ -29,14 +29,27 @@ public class Goalie : AIPlayer {
             //    }
             //}
             Vector3 ballToGoal = otherGoal.position - ball.position;
-            agent.SetDestination(new Vector3(Mathf.Clamp(((ball.transform.position.x + 32f) / 64f) * 4, 0, 7) + startingPos.x, transform.position.y, Mathf.Clamp(ball.transform.position.z, -10, 10)));
-            if (Vector3.Distance(ball.transform.position, transform.position) <= 1)
+            Vector3 ballToMyGoal = myGoal.position - ball.position;
+            Vector3 desiredDestination = ball.position - ballToMyGoal.normalized;
+            Vector3 ballNotCloseDesiredPosition = new Vector3(Mathf.Clamp(((ball.transform.position.x + 32f) / 64f) * 4, 0, 7) + startingPos.x, transform.position.y, Mathf.Clamp(ball.transform.position.z, -10, 10));
+            if (Vector3.Distance(ball.transform.position, transform.position) <= 4.5f && Vector3.Distance(transform.position, startingPos) < 10)
             {
-                if (Vector3.Angle(ballToGoal, this.transform.forward) > 50)
+                agent.SetDestination(desiredDestination);
+            }
+            else
+            {
+                agent.SetDestination(ballNotCloseDesiredPosition);
+            }
+            
+            if (Vector3.Distance(ball.transform.position, transform.position) <= 1.5f)
+            {
+                Vector3 vectorToKick = ball.transform.position - transform.position;
+                vectorToKick = vectorToKick.normalized;
+                if (Vector3.Angle(ballToGoal, this.transform.forward) > 40)
                 {
-                    Vector3 kickVector = this.transform.forward;
-                    kickVector = kickVector.normalized;
-                    ball.GetComponent<Rigidbody>().AddForce(kickVector * 30);
+                    vectorToKick.y += 0.2f;
+
+                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * 79);
                 }
                 else
                 {
