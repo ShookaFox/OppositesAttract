@@ -47,6 +47,7 @@ public class Ball : MonoBehaviour {
     private void resetTransform() {
         transform.position = startTransform.position;
         this.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 
     private void Update()
