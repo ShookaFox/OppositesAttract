@@ -17,22 +17,14 @@ public class DialogueTrigger : MonoBehaviour {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogueSession);
     }
 
-    public void TriggerDialogue()
-    {
-        
-    }
-
     public void PlaySoccer()
     {
-        tryingToPlaySoccer = true;
-        fadeOut.isFading = true;
+        fadeOut.FadeOutNow(ActuallyPlaySoccer);
     }
 
-    private void Update()
+
+    private void ActuallyPlaySoccer()
     {
-        if (tryingToPlaySoccer && fadeOut.finishedFading)
-        {
-            SceneManager.LoadScene(2);
-        }
+        SceneManager.LoadScene(2);
     }
 }

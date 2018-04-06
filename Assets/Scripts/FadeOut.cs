@@ -11,6 +11,8 @@ public class FadeOut : MonoBehaviour {
     public float timeToFadeOut = 2f;
     private float a = 0;
 
+    public delegate void OnComplete();
+
     private void Start()
     {
         fadingImage.color = new Color(fadingImage.color.r, fadingImage.color.b, fadingImage.color.g, a);
@@ -29,6 +31,26 @@ public class FadeOut : MonoBehaviour {
 
             fadingImage.color = new Color(fadingImage.color.r, fadingImage.color.b, fadingImage.color.g, a);
         }
+    }
+
+    public void FadeOutNow(OnComplete onComplete)
+    {
+        StartCoroutine(StartFadingCoroutine(onComplete));
+    }
+
+    IEnumerator StartFadingCoroutine(OnComplete onComplete)
+    {
+        a = 0f;
+
+        while (a <= 1)
+        {
+            a += Time.deltaTime / timeToFadeOut;
+            fadingImage.color = new Color(fadingImage.color.r, fadingImage.color.b, fadingImage.color.g, a);
+
+            yield return null;
+        }
+
+        onComplete.Invoke();
     }
 
 }
