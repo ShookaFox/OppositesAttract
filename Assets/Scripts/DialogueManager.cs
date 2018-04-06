@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    public float heightOfChoiceButton = 32.7f;
+    public float spaceBetweenChoiceButtons = 5f;
+    public float panelInitialSize = 280.37f;
+    public GameObject dialoguePanel;
+
     public TMPro.TextMeshProUGUI npcNameText;
     public TMPro.TextMeshProUGUI dialogueTextText;
 
@@ -12,19 +17,109 @@ public class DialogueManager : MonoBehaviour
     public TMPro.TextMeshProUGUI option3Text;
     public TMPro.TextMeshProUGUI option4Text;
 
+    public GameObject option1Btn;
+    public GameObject option2Btn;
+    public GameObject option3Btn;
+    public GameObject option4Btn;
+
     public GameObject continueButton;
 
-    public Animator animator;
-
-    public TextAsset testDialogue;
+    public Animator dialoguePanelAnimator;
 
     DialogueSession dialogueSession;
 
     public void StartDialogue(DialogueSession dialogueSession)
     {
         this.dialogueSession = dialogueSession;
-        animator.SetBool("IsOpen", true);
+        dialoguePanelAnimator.SetBool("IsOpen", true);
         DealWithCurrentNode();
+    }
+
+    IEnumerator AnimateChoices(int numberOfChoices)
+    {
+        float lerpTime = 0f;
+        int choiceID = 0;
+        int choicesAlreadyShowing = 0;
+        if (option1Btn.activeInHierarchy) choicesAlreadyShowing = 1;
+        if (option2Btn.activeInHierarchy) choicesAlreadyShowing = 2;
+        if (option3Btn.activeInHierarchy) choicesAlreadyShowing = 3;
+        if (option4Btn.activeInHierarchy) choicesAlreadyShowing = 4;
+        RectTransform diaTransform = dialoguePanel.GetComponent<RectTransform>();
+        float origSize = diaTransform.sizeDelta.y;
+
+        int choicesDiff = numberOfChoices - choicesAlreadyShowing;
+        float sizeDiff = origSize - (numberOfChoices * (heightOfChoiceButton) + (Mathf.Clamp(Mathf.Abs(numberOfChoices) -1, 0, 4) * spaceBetweenChoiceButtons));
+
+        Vector3 o1Pos = option1Btn.transform.position;
+        Vector3 o2Pos = option2Btn.transform.position;
+        Vector3 o3Pos = option3Btn.transform.position;
+        Vector3 o4Pos = option4Btn.transform.position;
+
+        float t = 0;
+        while (choiceID <= 4)
+        {
+            lerpTime += Time.unscaledDeltaTime;
+            t = lerpTime / 0.2f;
+            t = t * t * t * (t * (6f * t - 15f) + 10f);
+            if (choiceID == 0)
+            {
+                diaTransform.sizeDelta = new Vector2(diaTransform.sizeDelta.x, origSize + (sizeDiff * t));
+            }
+
+            if (choiceID == 1 && numberOfChoices > 0 && choicesAlreadyShowing < 1)
+            {
+                option1Btn.transform.position = new Vector3((o1Pos.x - 10) + (t * 10), o1Pos.y, o1Pos.z);
+                option1Text.color = new Color(option1Text.color.r, option1Text.color.g, option1Text.color.b, t);
+            }
+            else
+            {
+                option1Btn.transform.position = new Vector3((o1Pos.x) + (t * -10), o1Pos.y, o1Pos.z);
+                option1Text.color = new Color(option1Text.color.r, option1Text.color.g, option1Text.color.b, 1-t);
+            }
+
+            if (choiceID == 2 && numberOfChoices > 1 && choicesAlreadyShowing < 2)
+            {
+                option2Btn.transform.position = new Vector3((o2Pos.x - 10) + (t * 10), o2Pos.y, o2Pos.z);
+                option2Text.color = new Color(option2Text.color.r, option2Text.color.g, option2Text.color.b, t);
+            }
+            else
+            {
+                option2Btn.transform.position = new Vector3((o2Pos.x) + (t * -10), o2Pos.y, o2Pos.z);
+                option2Text.color = new Color(option2Text.color.r, option2Text.color.g, option2Text.color.b, 1-t);
+            }
+
+            if (choiceID == 3 && numberOfChoices > 2 && choicesAlreadyShowing < 3)
+            {
+                option3Btn.transform.position = new Vector3((o3Pos.x - 10) + (t * 10), o3Pos.y, o3Pos.z);
+                option3Text.color = new Color(option3Text.color.r, option3Text.color.g, option3Text.color.b, t);
+            }
+            else
+            {
+                option3Btn.transform.position = new Vector3((o3Pos.x) + (t * -10), o3Pos.y, o3Pos.z);
+                option3Text.color = new Color(option3Text.color.r, option3Text.color.g, option3Text.color.b, 1-t);
+            }
+
+            if (choiceID == 4 && numberOfChoices > 3 && choicesAlreadyShowing < 4)
+            {
+                option4Btn.transform.position = new Vector3((o4Pos.x - 10) + (t * 10), o4Pos.y, o4Pos.z);
+                option4Text.color = new Color(option4Text.color.r, option4Text.color.g, option4Text.color.b, t);
+            }
+            else
+            {
+                option4Btn.transform.position = new Vector3((o4Pos.x) + (t * -10), o4Pos.y, o4Pos.z);
+                option4Text.color = new Color(option4Text.color.r, option4Text.color.g, option4Text.color.b, 1-t);
+            }
+
+            if (t >= 1)
+            {
+                lerpTime = 0;
+                choiceID++;
+            }
+
+            yield return null;
+        }
+        
+
     }
 
     public void Option1Selected()
@@ -76,17 +171,16 @@ public class DialogueManager : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(TypeSentence(textDialogueNode.text));
 
-
                 if (textDialogueNode.choices == null)
                 {
-                    animator.SetInteger("NumOfOptions", 0);
                     continueButton.SetActive(true);
                 }
                 else
                 {
-                    animator.SetInteger("NumOfOptions", textDialogueNode.choices.Length);
                     if (textDialogueNode.choices.Length > 0)
                     {
+
+                        
                         continueButton.SetActive(false);
 
                         option1Text.text = ((ChoiceDialogueNode)dialogueSession.dialogueNodes[textDialogueNode.choices[0]]).title;
@@ -179,12 +273,13 @@ public class DialogueManager : MonoBehaviour
             dialogueTextText.text += letter;
             yield return null;
         }
+        StartCoroutine(AnimateChoices(3));
     }
 
     public void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
-        animator.SetInteger("NumOfOptions", 0);
+        dialoguePanelAnimator.SetBool("IsOpen", false);
+        dialoguePanelAnimator.SetInteger("NumOfOptions", 0);
     }
 
     public void PlayButtonHoveredSound()
