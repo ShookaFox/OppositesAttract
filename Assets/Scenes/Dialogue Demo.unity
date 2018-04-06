@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731725, g: 0.13414745, b: 0.12107873, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1121,22 +1121,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f1c8310588a344c854c4612bbdf36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heightOfChoiceButton: 32.7
-  spaceBetweenChoiceButtons: 5
-  panelInitialSize: 280.37
-  dialoguePanel: {fileID: 679342770}
   npcNameText: {fileID: 581778694}
   dialogueTextText: {fileID: 626946203}
   option1Text: {fileID: 1917798745}
   option2Text: {fileID: 263619596}
   option3Text: {fileID: 1430970089}
   option4Text: {fileID: 1861360244}
-  option1Btn: {fileID: 1007556473}
-  option2Btn: {fileID: 881061190}
-  option3Btn: {fileID: 254719590}
-  option4Btn: {fileID: 210822396}
   continueButton: {fileID: 272270462}
-  dialoguePanelAnimator: {fileID: 679342774}
+  animator: {fileID: 679342774}
+  testDialogue: {fileID: 4900000, guid: 996ef2b71ffb90640b581310d2a65a57, type: 3}
 --- !u!4 &421502339
 Transform:
   m_ObjectHideFlags: 0
@@ -1335,7 +1328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5842285, y: -5.699997}
+  m_AnchoredPosition: {x: 3.3999634, y: -4.199997}
   m_SizeDelta: {x: -121.900024, y: -109.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626946203
@@ -1496,7 +1489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -10, y: -290}
+  m_AnchoredPosition: {x: -10, y: 136.1}
   m_SizeDelta: {x: -20, y: 280.29}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &679342772
@@ -2284,7 +2277,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2687,7 +2680,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2840,7 +2833,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
