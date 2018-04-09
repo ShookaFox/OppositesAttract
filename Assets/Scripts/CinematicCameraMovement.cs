@@ -8,6 +8,8 @@ public class CinematicCameraMovement : MonoBehaviour {
     public List<Movement> movements;
     public int movIndex = 0;
 
+    public bool moving = false;
+
     [System.Serializable]
     public class OnMovementsComplete : UnityEvent { }
 
@@ -15,61 +17,72 @@ public class CinematicCameraMovement : MonoBehaviour {
 
     private void Start()
     {
+        
+    }
+
+    public void StartMovements()
+    {
         if (movements.Count > 0)
         {
             Movement mov = movements[0];
+            movIndex = 0;
+            currentLerpTime = 0f;
             transform.position = mov.point1.position;
             transform.rotation = Quaternion.Euler(mov.point1.rotation);
         }
+        moving = true;
     }
 
     private float currentLerpTime;
     private void Update()
     {
-        currentLerpTime += Time.deltaTime;
-        if (currentLerpTime > movements[movIndex].timeToComplete)
+        if (moving)
         {
-            currentLerpTime = movements[movIndex].timeToComplete;
-        }
-
-        float t = currentLerpTime / movements[movIndex].timeToComplete;
-
-        switch (movements[movIndex].transitionType)
-        {
-            case TransitionType.EaseOut:
-                t = Mathf.Sin(t * Mathf.PI * 0.5f);
-                break;
-            case TransitionType.EaseIn:
-                t = 1f - Mathf.Cos(t * Mathf.PI * 0.5f);
-                break;
-            case TransitionType.Quadratic:
-                t = t * t;
-                break;
-            case TransitionType.SmoothStep:
-                t = t * t * (3f - 2f * t);
-                break;
-            case TransitionType.SmootherStep:
-                t = t * t * t * (t * (6f * t - 15f) + 10f);
-                break;
-            case TransitionType.Linear:
-                t = t;
-                break;
-        }
-
-        transform.position = Vector3.Lerp(movements[movIndex].point1.position, movements[movIndex].point2.position, t);
-        transform.rotation = Quaternion.Euler(Vector3.Lerp(movements[movIndex].point1.rotation, movements[movIndex].point2.rotation, t));
-
-        
-        if (currentLerpTime == movements[movIndex].timeToComplete)
-        {
-            if (movements.Count > movIndex + 1)
+            currentLerpTime += Time.deltaTime;
+            if (currentLerpTime > movements[movIndex].timeToComplete)
             {
-                movIndex++;
-                currentLerpTime = 0f;
+                currentLerpTime = movements[movIndex].timeToComplete;
             }
-            else
+
+            float t = currentLerpTime / movements[movIndex].timeToComplete;
+
+            switch (movements[movIndex].transitionType)
             {
-                whenMovementsComplete.Invoke();
+                case TransitionType.EaseOut:
+                    t = Mathf.Sin(t * Mathf.PI * 0.5f);
+                    break;
+                case TransitionType.EaseIn:
+                    t = 1f - Mathf.Cos(t * Mathf.PI * 0.5f);
+                    break;
+                case TransitionType.Quadratic:
+                    t = t * t;
+                    break;
+                case TransitionType.SmoothStep:
+                    t = t * t * (3f - 2f * t);
+                    break;
+                case TransitionType.SmootherStep:
+                    t = t * t * t * (t * (6f * t - 15f) + 10f);
+                    break;
+                case TransitionType.Linear:
+                    t = t;
+                    break;
+            }
+
+            transform.position = Vector3.Lerp(movements[movIndex].point1.position, movements[movIndex].point2.position, t);
+            transform.rotation = Quaternion.Euler(Vector3.Lerp(movements[movIndex].point1.rotation, movements[movIndex].point2.rotation, t));
+
+
+            if (currentLerpTime == movements[movIndex].timeToComplete)
+            {
+                if (movements.Count > movIndex + 1)
+                {
+                    movIndex++;
+                    currentLerpTime = 0f;
+                }
+                else
+                {
+                    whenMovementsComplete.Invoke();
+                }
             }
         }
     }

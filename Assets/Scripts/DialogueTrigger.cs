@@ -12,14 +12,15 @@ public class DialogueTrigger : MonoBehaviour {
     private void Start()
     {
         DialogueSession dialogueSession = DialogueTreeParser.ParseDialogueJSON(dialogueDemoJSON.text);
-        dialogueSession.actions["playSoccer"].Add(PlaySoccer);
+        dialogueSession.actions["playSoccer"].listeners.Add(PlaySoccer);
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialogueSession);
     }
 
-    public void PlaySoccer()
+    public bool PlaySoccer()
     {
         fadeOut.FadeOutNow(ActuallyPlaySoccer);
+        return true;
     }
 
 

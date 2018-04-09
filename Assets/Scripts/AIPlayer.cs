@@ -7,4 +7,6 @@ public class AIPlayer : MonoBehaviour {
     protected NavMeshAgent agent;
     public Transform ball;
     public Transform myGoal;
+
+    
 }

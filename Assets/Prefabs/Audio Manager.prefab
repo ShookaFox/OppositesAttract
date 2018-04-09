@@ -53,7 +53,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.356
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -215,6 +215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 82276497065740216}
   soundPlayer: {fileID: 82291474601396716}
-  mainMenuMusic: {fileID: 8300000, guid: 41ddd22eee7df8f4db51ba1ecd31f34d, type: 3}
+  music1: {fileID: 8300000, guid: de6aa09ec6a4d8f49ac65d66953c2c87, type: 3}
+  music2: {fileID: 8300000, guid: 1890fdc92e66457489530faaeb107150, type: 3}
+  music3: {fileID: 8300000, guid: 1ee2b716b1c991245b7a4c98ad87a7fe, type: 3}
+  music4: {fileID: 8300000, guid: 121658da0a0d8154c9fae3db672e6708, type: 3}
+  music5: {fileID: 8300000, guid: 11bb5e97b0082d34cae75ec27dea12dc, type: 3}
+  musicTrack: 0
+  currentlyPlayingMusic: 0
   clickingSound: {fileID: 8300000, guid: 08c634c82f1d9a34f8c2bf090b9f3f97, type: 3}
   hoveredSound: {fileID: 8300000, guid: a7182554e7c44184e8661a99fc5351f8, type: 3}

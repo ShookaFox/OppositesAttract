@@ -18,13 +18,24 @@ public class DialogueManager : MonoBehaviour
 
     public TextAsset testDialogue;
 
-    DialogueSession dialogueSession;
+    public DialogueSession dialogueSession;
+
+    public void Awake()
+    {
+        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(animator.gameObject);
+    }
 
     public void StartDialogue(DialogueSession dialogueSession)
     {
         this.dialogueSession = dialogueSession;
         animator.SetBool("IsOpen", true);
         DealWithCurrentNode();
+    }
+
+    public void DismissDialogueBox()
+    {
+        animator.SetBool("IsOpen", false);
     }
 
     public void Option1Selected()
@@ -62,7 +73,7 @@ public class DialogueManager : MonoBehaviour
         DealWithCurrentNode();
     }
 
-    private void DealWithCurrentNode()
+    public void DealWithCurrentNode()
     {
         if (dialogueSession.currentID != null)
         {
@@ -72,8 +83,11 @@ public class DialogueManager : MonoBehaviour
                 TextDialogueNode textDialogueNode = (TextDialogueNode)dialogueNode;
 
                 npcNameText.text = textDialogueNode.character;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
 
                 StopAllCoroutines();
+                animator.SetBool("IsOpen", true);
                 StartCoroutine(TypeSentence(textDialogueNode.text));
 
 
@@ -159,9 +173,14 @@ public class DialogueManager : MonoBehaviour
             {
                 ActionDialogueNode actionDialogueNode = (ActionDialogueNode)dialogueNode;
                 string eventName = actionDialogueNode.eventName;
-                foreach (OnAction actionDelegate in dialogueSession.actions[eventName])
+                foreach (OnAction actionDelegate in dialogueSession.actions[eventName].listeners)
                 {
-                    actionDelegate.Invoke();
+                    dialogueSession.actions[eventName].finished = actionDelegate.Invoke();
+                    if (dialogueSession.actions[eventName].finished)
+                    {
+                        dialogueSession.currentID = dialogueSession.dialogueNodes[dialogueSession.currentID].next;
+                        DealWithCurrentNode();
+                    }
                 }
             }
         }

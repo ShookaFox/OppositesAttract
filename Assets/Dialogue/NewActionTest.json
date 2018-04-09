@@ -1,0 +1,27 @@
+{
+  "dialogue": [
+    {
+      "type": "Text",
+      "id": "8875648d-a23d-4ae8-ab66-b6fe0010654c",
+      "actor": "Sam Hedgehog",
+      "name": "We're playing soccer now.",
+      "next": "4edf90da-e2e0-45c6-a87e-4ec1c282e4dd"
+    },
+    {
+      "type": "Action",
+      "id": "4edf90da-e2e0-45c6-a87e-4ec1c282e4dd",
+      "actor": "",
+      "descname": "Play Soccer",
+      "uniquename": "playSoccer",
+      "desc": "Play Soccer",
+      "next": "4ffd3a03-039c-49e1-9005-a31406edcc14"
+    },
+    {
+      "type": "Text",
+      "id": "4ffd3a03-039c-49e1-9005-a31406edcc14",
+      "actor": "Sam Hedgehog",
+      "name": "We just played soccer!",
+      "next": "8875648d-a23d-4ae8-ab66-b6fe0010654c"
+    }
+  ]
+}

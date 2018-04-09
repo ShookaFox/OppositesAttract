@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void OnAction();
+public delegate bool OnAction();
 
 public static class DialogueTreeParser {
     public static DialogueSession ParseDialogueJSON(string sourceJSON)
@@ -13,7 +13,7 @@ public static class DialogueTreeParser {
         string initID = dialogueNodesJSONMirror[0].id;
 
         IDictionary<string, DialogueNode> dialogueNodes = new Dictionary<string, DialogueNode> ();
-        IDictionary<string, List<OnAction>> actions = new Dictionary<string, List<OnAction>> ();
+        IDictionary<string, DialogueAction> actions = new Dictionary<string, DialogueAction> ();
         for (int i = 0; i < dialogueNodesJSONMirror.Length; i++)
         {
             switch (dialogueNodesJSONMirror[i].type)
@@ -47,9 +47,10 @@ public static class DialogueTreeParser {
                     ActionDialogueNode actionDialogueNode = new ActionDialogueNode();
                     actionDialogueNode.id = dialogueNodesJSONMirror[i].id;
                     actionDialogueNode.eventName = dialogueNodesJSONMirror[i].uniquename;
+                    actionDialogueNode.next = dialogueNodesJSONMirror[i].next;
                     if (!actions.ContainsKey(actionDialogueNode.eventName))
                     {
-                        actions.Add(actionDialogueNode.eventName, new List<OnAction>());
+                        actions.Add(actionDialogueNode.eventName, new DialogueAction());
                     }
 
                     dialogueNodes.Add(actionDialogueNode.id, actionDialogueNode);
@@ -84,6 +85,7 @@ public static class DialogueTreeParser {
 
         DialogueSession dialogueSession = new DialogueSession();
         dialogueSession.currentID = initID;
+        dialogueSession.firstID = initID;
         dialogueSession.dialogueNodes = dialogueNodes;
         dialogueSession.actions = actions;
         dialogueSession.variables = new Dictionary<string, string>();
@@ -126,9 +128,16 @@ public class UpperLevelDialogueNodeJSONMirror
 public class DialogueSession
 {
     public string currentID;
+    public string firstID;
     public IDictionary<string, DialogueNode> dialogueNodes;
-    public IDictionary<string, List<OnAction>> actions;
+    public IDictionary<string, DialogueAction> actions;
     public IDictionary<string, string> variables;
+}
+
+public class DialogueAction
+{
+    public List<OnAction> listeners = new List<OnAction>();
+    public bool finished = false;
 }
 
 public abstract class DialogueNode

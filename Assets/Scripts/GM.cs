@@ -4,54 +4,73 @@ using UnityEngine;
 
 public class GM : MonoBehaviour
 {
+    public static GM instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     public GameObject fpsController;
-    public GameObject cinematicCamera;
+    public CinematicCameraMovement cinematicCamera;
+    public DialogueManager dialogueManager;
+    public GameObject soccerGameObject;
+    public Scoreboard scoreboard;
 
-    public static GameState currentState = GameState.INTRO;
+    public bool gameRunning = false;
+    public bool shouldReset = false;
+    
+    public TextAsset dialogueJSON;
 
-    // Use this for initialization
+    DialogueSession dialogueSession;
+
     void Start()
     {
-        if (currentState == GameState.PLAYING)
-        {
-            Time.timeScale = 1;
-            fpsController.SetActive(true);
-            cinematicCamera.SetActive(false);
-        }
-        else
-        {
-            fpsController.SetActive(false);
-            cinematicCamera.SetActive(true);
-            //Time.timeScale = 0;
-        }
+        dialogueSession = DialogueTreeParser.ParseDialogueJSON(dialogueJSON.text);
+        dialogueSession.actions["playSoccer"].listeners.Add(StartGame);
+
+        dialogueManager.StartDialogue(dialogueSession);
     }
 
-    // Update is called once per frame
+    bool StartGame()
+    {
+        soccerGameObject.SetActive(true);
+        cinematicCamera.gameObject.SetActive(false);
+        dialogueManager.DismissDialogueBox();
+        scoreboard.StartTimer();
+        gameRunning = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        return false;
+    }
+
+    public void OnGameEnded(int homeScore, int visitorScore)
+    {
+        //dialogueManager.dialogueSession.actions["playSoccer"].finished = true;
+        dialogueManager.dialogueSession.currentID = dialogueManager.dialogueSession.dialogueNodes[dialogueManager.dialogueSession.currentID].next;
+        dialogueManager.DealWithCurrentNode();
+        gameRunning = false;
+        shouldReset = true;
+        
+        scoreboard.StopTimer();
+        scoreboard.ResetTimer();
+        scoreboard.redScore = 0;
+        scoreboard.blueScore = 0;
+        soccerGameObject.SetActive(false);
+        cinematicCamera.gameObject.SetActive(true);
+    }
+    
     void Update()
     {
-        if (currentState == GameState.PLAYING)
+        if (scoreboard.timer > 0.16f)
         {
-            Time.timeScale = 1;
-            fpsController.SetActive(true);
-            cinematicCamera.SetActive(false);
-        }
-        else
-        {
-            fpsController.SetActive(false);
-            cinematicCamera.SetActive(true);
-            //Time.timeScale = 0;
+            shouldReset = false;
         }
     }
-
-    public void OnIntroComplete()
-    {
-        currentState = GameState.PLAYING;
-    }
-}
-
-public enum GameState
-{
-    PLAYING,
-    INTRO,
-    PAUSED
 }

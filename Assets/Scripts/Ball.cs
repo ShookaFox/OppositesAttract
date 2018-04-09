@@ -21,11 +21,8 @@ public class Ball : MonoBehaviour {
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (GM.currentState == GameState.PLAYING)
-        {
-            audioSource.clip = ballHittingGround;
-            audioSource.Play();
-        }
+        audioSource.clip = ballHittingGround;
+        audioSource.Play();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -52,28 +49,30 @@ public class Ball : MonoBehaviour {
 
     private void Update()
     {
-        if (GM.currentState == GameState.PLAYING)
+        if (GM.instance.shouldReset)
         {
-            rnearCount = 0;
-            bnearCount = 0;
-            
-            foreach (GameObject rplayer in redTeam)
-            {
-                if (Vector3.Distance(transform.position, rplayer.transform.position) <= 8)
-                {
-                    rnearCount++;
-                }
-            }
-
-            foreach (GameObject bplayer in blueTeam)
-            {
-                if (Vector3.Distance(transform.position, bplayer.transform.position) <= 8)
-                {
-                    bnearCount++;
-                }
-            }
-
-            if ((transform.position.x < -68 || transform.position.x > 68) && (transform.position.z < -4 || transform.position.z > 4)) resetTransform();
+            resetTransform();
         }
+
+        rnearCount = 0;
+        bnearCount = 0;
+            
+        foreach (GameObject rplayer in redTeam)
+        {
+            if (Vector3.Distance(transform.position, rplayer.transform.position) <= 8)
+            {
+                rnearCount++;
+            }
+        }
+
+        foreach (GameObject bplayer in blueTeam)
+        {
+            if (Vector3.Distance(transform.position, bplayer.transform.position) <= 8)
+            {
+                bnearCount++;
+            }
+        }
+
+        if ((transform.position.x < -68 || transform.position.x > 68) && (transform.position.z < -4 || transform.position.z > 4)) resetTransform();
     }
 }

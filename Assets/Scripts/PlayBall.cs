@@ -16,51 +16,64 @@ public class PlayBall : MonoBehaviour
     public float kickLvl2 = 40f;
     public float kickLvl3 = 75f;
 
+    public Vector3 startPosition;
+    public Quaternion startRotation;
+
+    private void Awake()
+    {
+        startPosition = transform.position;
+        startRotation = transform.rotation;
+    }
+
     void Start () {
         agent = this.GetComponent<NavMeshAgent>();
         agent.speed = Random.Range(7.0f, 15.0f);
         startingPos = transform.position;
     }
 	
-	void Update () {
-        if (GM.currentState == GameState.PLAYING)
+	void Update ()
+    {
+        if (GM.instance.shouldReset)
         {
-            Vector3 ballToGoal = myGoal.position - ball.position;
+            transform.position = startPosition;
+            transform.rotation = startRotation;
+        }
 
-            Vector3 desiredDestination = ball.position - ballToGoal.normalized;
+        Vector3 ballToGoal = myGoal.position - ball.position;
 
-            float distanceToBall = Vector3.Distance(ball.transform.position, transform.position);
+        Vector3 desiredDestination = ball.position - ballToGoal.normalized;
 
-            if ((ball.GetComponent<Ball>().rnearCount < 3 && myTeam == 1) || (ball.GetComponent<Ball>().bnearCount < 3 && myTeam == 2) || Vector3.Distance(transform.position, ball.position) < 2)
+        float distanceToBall = Vector3.Distance(ball.transform.position, transform.position);
+
+        if ((ball.GetComponent<Ball>().rnearCount < 3 && myTeam == 1) || (ball.GetComponent<Ball>().bnearCount < 3 && myTeam == 2) || Vector3.Distance(transform.position, ball.position) < 2)
+        {
+            agent.SetDestination(desiredDestination);
+        }
+        else
+        {
+            agent.SetDestination(startingPos);
+        }
+            
+        if (distanceToBall <= 1.5f)
+        {
+            Vector3 vectorToKick = this.transform.forward;
+            vectorToKick.y += 0.15f;
+            float angle = Vector3.Angle(ballToGoal, this.transform.forward);
+            if (angle < 10)
             {
-                agent.SetDestination(desiredDestination);
+                ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl3);
+            }
+            else if (angle < 20)
+            {
+                ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl2);
+            }
+            else if (angle < 50)
+            {
+                ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl1);
             }
             else
             {
-                agent.SetDestination(startingPos);
-            }
-            
-            if (distanceToBall <= 1.5f)
-            {
-                Vector3 vectorToKick = this.transform.forward;
-                vectorToKick.y += 0.15f;
-                float angle = Vector3.Angle(ballToGoal, this.transform.forward);
-                if (angle < 10)
-                {
-                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl3);
-                }
-                else if (angle < 20)
-                {
-                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl2);
-                }
-                else if (angle < 50)
-                {
-                    ball.GetComponent<Rigidbody>().AddForce(vectorToKick * kickLvl1);
-                }
-                else
-                {
-                    this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(ballToGoal), Time.deltaTime * agent.angularSpeed);
-                }
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(ballToGoal), Time.deltaTime * agent.angularSpeed);
             }
         }
 	}
