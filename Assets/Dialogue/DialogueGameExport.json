@@ -1,0 +1,2282 @@
+{
+  "dialogue": [
+    {
+      "type": "Action",
+      "id": "91ac4bd5-e6ca-4e7a-8bea-cb8dd2a304de",
+      "actor": "",
+      "uniquename": "genericoHouse",
+      "next": "951771fd-e4d9-4a34-ace5-7151d2127ecb"
+    },
+    {
+      "type": "Text",
+      "id": "951771fd-e4d9-4a34-ace5-7151d2127ecb",
+      "actor": "Tory Narra",
+      "name": "It's a beautiful day to play soccer. The sky is blue and the grass is green.",
+      "next": "adaf704b-276a-4e3d-b7c7-29d00eb2eea2"
+    },
+    {
+      "type": "Text",
+      "id": "adaf704b-276a-4e3d-b7c7-29d00eb2eea2",
+      "actor": "Tory Narra",
+      "name": "This is your house. You’re supposed to be at the field before the final three soccer games, but you're sitting in here, playing video games!",
+      "next": "c3249903-8dc7-485c-9370-c8cd55786382"
+    },
+    {
+      "type": "Text",
+      "id": "445ae404-07b6-4d6e-92cb-bd16297fd07a",
+      "actor": "Tory Narra",
+      "name": "Gen Erico! You’re supposed to be at the game!!! Not playing these fake soccer games! Playing Soccer games is for nerds!",
+      "next": "e437ca0f-602f-4a3e-b6e7-ad2433676eda"
+    },
+    {
+      "type": "Text",
+      "id": "e437ca0f-602f-4a3e-b6e7-ad2433676eda",
+      "actor": "Tory Narra",
+      "name": "And, I know you want to find love, don’t you?",
+      "choices": [ "bdebf9ef-3d27-4e03-9533-c288f9f7f1ac", "23635540-c6a3-4a57-b32a-435d5f10ca8f", "12d45b22-acde-40f2-aa9a-c1031f9e0a17" ]
+    },
+    {
+      "type": "Choice",
+      "id": "bdebf9ef-3d27-4e03-9533-c288f9f7f1ac",
+      "title": "Whaaa Ha Ha ",
+      "name": "HOW DID YOU KNOW THAT???\n",
+      "next": "4dabdbb2-3b50-44c6-a04d-4f0a56bd97cd"
+    },
+    {
+      "type": "Choice",
+      "id": "23635540-c6a3-4a57-b32a-435d5f10ca8f",
+      "title": "What I ummmm…",
+      "name": " I'm terrible at Soccer anyway",
+      "next": "25f463fa-a8ef-40e0-8a17-4b212e33be4f"
+    },
+    {
+      "type": "Choice",
+      "id": "12d45b22-acde-40f2-aa9a-c1031f9e0a17",
+      "title": "Ahhhh",
+      "name": "I forgot practice was today!!!  Don't worry, though, I'll be right there to win this game!",
+      "next": "8576bdfa-36f1-4baf-9e1b-a670603ee6f5"
+    },
+    {
+      "type": "Text",
+      "id": "4dabdbb2-3b50-44c6-a04d-4f0a56bd97cd",
+      "actor": "Tory Narra",
+      "name": "Well, I’m the love fairy. I know why you’re really desperate, and you need all the help you can get.",
+      "next": "38d1de50-1bbd-49a2-bc6f-fab2af0846c6"
+    },
+    {
+      "type": "Text",
+      "id": "38d1de50-1bbd-49a2-bc6f-fab2af0846c6",
+      "actor": "Tory Narra",
+      "name": "Well come on then, team ASSA needs you! Lets go!\n",
+      "next": "10ebb68b-fb77-4103-9109-115ee39a7221"
+    },
+    {
+      "type": "Text",
+      "id": "e2960855-f5d6-4c35-85c1-d7692dbee7ac",
+      "actor": "Tory Narra",
+      "name": "Yeah! That's the Spirit!",
+      "next": "4032caec-6d6f-467b-a906-7ecf23b4586e"
+    },
+    {
+      "type": "Set",
+      "id": "4032caec-6d6f-467b-a906-7ecf23b4586e",
+      "variable": "Confidance0",
+      "value": "1",
+      "next": "5c9b9f0d-6c74-407e-9c23-88888ca025fe"
+    },
+    {
+      "type": "Set",
+      "id": "25f463fa-a8ef-40e0-8a17-4b212e33be4f",
+      "variable": "Confidance0",
+      "value": "0",
+      "next": "38d1de50-1bbd-49a2-bc6f-fab2af0846c6"
+    },
+    {
+      "type": "Action",
+      "id": "10ebb68b-fb77-4103-9109-115ee39a7221",
+      "actor": "",
+      "descname": "Start Game",
+      "uniquename": "startGame",
+      "desc": "Let's Play ball",
+      "next": "7570d556-503d-42da-9c4b-1bf6247481ab"
+    },
+    {
+      "type": "Text",
+      "id": "b9627fdd-3a9c-4d29-adb7-deb018f9d495",
+      "actor": "Tory Narra",
+      "name": "That was a good game, now go talk to someone, dummy!",
+      "choices": [ "94a18e63-342c-4304-816c-ac72887a95cc", "c45fd2af-b27d-4064-b0a2-4c53b2333cf2", "2acb0650-e0e6-4bc7-a026-0e9594e6f722" ]
+    },
+    {
+      "type": "Choice",
+      "id": "94a18e63-342c-4304-816c-ac72887a95cc",
+      "title": "Talk to Sam Hedghog",
+      "name": "He's the star player of the CosmoKnots",
+      "next": "dc32f8a1-936b-4261-b095-9b13fdce3256"
+    },
+    {
+      "type": "Choice",
+      "id": "c45fd2af-b27d-4064-b0a2-4c53b2333cf2",
+      "title": "Talk to Danny Lover",
+      "name": "He's a cute boy on your team, Team ASSA",
+      "next": "ed58a455-3f3d-46fc-baca-37453f2035ec"
+    },
+    {
+      "type": "Choice",
+      "id": "2acb0650-e0e6-4bc7-a026-0e9594e6f722",
+      "title": "Talk to Dark SilverSpark",
+      "name": "She's a Mysterious fox from Team CosmoKNOTS",
+      "next": "e13badfe-753f-422f-80da-1823f0d8aa3d"
+    },
+    {
+      "type": "Branch",
+      "id": "dc32f8a1-936b-4261-b095-9b13fdce3256",
+      "variable": "game1Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "509249b3-1576-4f1c-ae5c-a473304939fb"
+        },
+        {
+          "value": "_default",
+          "target": "007ceeea-5266-48ab-91d7-24416a2bbbc0"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "ed58a455-3f3d-46fc-baca-37453f2035ec",
+      "variable": "game1Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "be6b1e88-bc8c-4d5a-9984-1d80f4210ebb"
+        },
+        {
+          "value": "_default",
+          "target": "7f6a9a98-ec5e-4a42-9b06-12ab255578cb"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "e13badfe-753f-422f-80da-1823f0d8aa3d",
+      "variable": "game1Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "552cccf1-f7f4-4cfc-82ae-425a96a4aa27"
+        },
+        {
+          "value": "_default",
+          "target": "82cb6bd8-2bde-4f2f-8aee-e792eb210222"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "007ceeea-5266-48ab-91d7-24416a2bbbc0",
+      "actor": "Sam Hedghog",
+      "name": "Hah! Beat you fair and square! Better luck next time!",
+      "next": "62ba98c9-9218-4957-a3ad-300d8f919b10"
+    },
+    {
+      "type": "Text",
+      "id": "509249b3-1576-4f1c-ae5c-a473304939fb",
+      "actor": "Sam Hedgehog",
+      "name": "Wow! That was a mondo match you played! But I'll get ya next time!",
+      "next": "62ba98c9-9218-4957-a3ad-300d8f919b10"
+    },
+    {
+      "type": "Text",
+      "id": "7f6a9a98-ec5e-4a42-9b06-12ab255578cb",
+      "actor": "Danny Lover",
+      "name": "Awww, we'll get em next time, but you played a really great game!",
+      "next": "1bcb3cd2-c420-4e03-83c0-8d2434cd72aa"
+    },
+    {
+      "type": "Text",
+      "id": "be6b1e88-bc8c-4d5a-9984-1d80f4210ebb",
+      "actor": "Danny Lover",
+      "name": "Yeah we won!!!!\nYou played a great game!",
+      "next": "1bcb3cd2-c420-4e03-83c0-8d2434cd72aa"
+    },
+    {
+      "type": "Text",
+      "id": "82cb6bd8-2bde-4f2f-8aee-e792eb210222",
+      "actor": "Dark SilverSpark",
+      "name": "We totally kicked your sorry butt! Better luck next time Sucker!!!",
+      "next": "4ac3c36e-8ffe-4059-80e7-e2bdd5efa1ef"
+    },
+    {
+      "type": "Text",
+      "id": "552cccf1-f7f4-4cfc-82ae-425a96a4aa27",
+      "actor": "Dark SilverSpark",
+      "name": "Aww man!!! But don't worry. ",
+      "next": "4cd9be4f-948c-4aea-956c-130d8fad7a7a"
+    },
+    {
+      "type": "Text",
+      "id": "4cd9be4f-948c-4aea-956c-130d8fad7a7a",
+      "actor": "Dark SilverSpark",
+      "name": "Sam and team CosmoKnots will Pummel you into the ground next time!!!!!!!! ",
+      "next": "73fbea98-dddb-400f-bfc7-3ade42c41837"
+    },
+    {
+      "type": "Text",
+      "id": "70b048a2-3430-4b1e-b793-4ca1ceec0652",
+      "actor": "Sam Hedghog",
+      "name": "Hey, what do you say we juice outta here and grab a bite to eat?\nHmmmm, maybe a Jelly Doughnut and a tall glass of koolaid?",
+      "next": "1b6efbea-f83a-47f8-b7c3-adb0436464cc"
+    },
+    {
+      "type": "Text",
+      "id": "62ba98c9-9218-4957-a3ad-300d8f919b10",
+      "actor": "Sam Hedgehog",
+      "name": "So how would you say you like to play? Do you like to go all in and get the ball, or are you more of a slowmo who likes to play it safe?",
+      "choices": [ "b5620dbc-1e80-443a-acd1-a2e2f820156d", "b2a8726a-abea-4f18-a3ab-beb7f2e271c0" ]
+    },
+    {
+      "type": "Choice",
+      "id": "b5620dbc-1e80-443a-acd1-a2e2f820156d",
+      "title": "I like to play it fast",
+      "name": "I'm not a slomo! I go straight for that ball and don't look back until the game is mine!",
+      "next": "b56b7588-d7b8-45d1-95c7-5f8b49638612"
+    },
+    {
+      "type": "Choice",
+      "id": "b2a8726a-abea-4f18-a3ab-beb7f2e271c0",
+      "title": "I'm not really up for front lines",
+      "name": "I like to make sure no one gets in our goal and help out the other teammates.",
+      "next": "4c8546b7-5103-4838-a524-fc7e74c7f4c9"
+    },
+    {
+      "type": "Text",
+      "id": "11f28c1a-b2d8-4222-97fa-2c1926fa7334",
+      "actor": "Sam Hedgehog",
+      "name": "Ahh okay. I'm not really up for that stuff. I like to get in fast and make sure they don't have a chance to get a point!",
+      "next": "b71fa73d-33f8-4796-a1ed-62187f1448c9"
+    },
+    {
+      "type": "Set",
+      "id": "1b6efbea-f83a-47f8-b7c3-adb0436464cc",
+      "variable": "sam2",
+      "value": "1",
+      "next": "6f06f833-0556-4ca7-87b7-8e6fcaf1aaf3"
+    },
+    {
+      "type": "Text",
+      "id": "6f06f833-0556-4ca7-87b7-8e6fcaf1aaf3",
+      "actor": "Tory Narra",
+      "name": "Great job! I think Sam might really like you. I'm proud of you for following your heart!",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Text",
+      "id": "b71fa73d-33f8-4796-a1ed-62187f1448c9",
+      "actor": "Tory Narra",
+      "name": "Oof! I don't know if he's your type, I think Danny's more your style.",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Text",
+      "id": "1bcb3cd2-c420-4e03-83c0-8d2434cd72aa",
+      "actor": "Danny Lover",
+      "name": "Say, what got you into soccer anyway?",
+      "choices": [ "4989bcac-aeec-436a-989e-bff4425ffee5", "67d4170e-daf8-4a15-84d4-f14077308c61" ]
+    },
+    {
+      "type": "Choice",
+      "id": "4989bcac-aeec-436a-989e-bff4425ffee5",
+      "title": "Fun!",
+      "name": "I just wanted to have fun and make some new, cool friends!",
+      "next": "3ca29ebc-a3db-47fa-a38f-b8de339d0474"
+    },
+    {
+      "type": "Choice",
+      "id": "67d4170e-daf8-4a15-84d4-f14077308c61",
+      "title": "I wanna be the best!",
+      "name": "I love watching soccer on TV. I wanna be the very best like no one ever was!",
+      "next": "d58d9513-6abe-46bf-ae2c-9d1b08ce3c87"
+    },
+    {
+      "type": "Text",
+      "id": "3ca29ebc-a3db-47fa-a38f-b8de339d0474",
+      "actor": "Danny Lover",
+      "name": "Oh yeah, I know exactly what you mean. That's why I'm here too. I've made lots of great friends.",
+      "next": "a2b44b43-ba74-46c5-9e04-9ac9da87fc61"
+    },
+    {
+      "type": "Text",
+      "id": "a2b44b43-ba74-46c5-9e04-9ac9da87fc61",
+      "actor": "Danny Lover",
+      "name": "And between you and me, I think that Aarin Aangrump. the goallie  is kinda cute!",
+      "next": "76c5a62c-2ea8-4e40-b5f8-a239a6b1e3dd"
+    },
+    {
+      "type": "Text",
+      "id": "d58d9513-6abe-46bf-ae2c-9d1b08ce3c87",
+      "actor": "Danny Lover",
+      "name": "Well good luck with that. I just decided to join to have fun and make some friends, and so far I love it. \nWell, anyway, Cya later.",
+      "next": "83cf5a12-69cb-414a-8d62-72e65388975c"
+    },
+    {
+      "type": "Text",
+      "id": "76c5a62c-2ea8-4e40-b5f8-a239a6b1e3dd",
+      "actor": "Danny Lover",
+      "name": "Well I'll talk to you later! That was a super game.",
+      "next": "13e9d606-f2e3-47ee-a0e3-354074b9ad0b"
+    },
+    {
+      "type": "Text",
+      "id": "83cf5a12-69cb-414a-8d62-72e65388975c",
+      "actor": "Tory Narra",
+      "name": "Oof. He's real nice, but I don't think hey's quite your style. You should talk to Sam or SilverSpark, because they share that competitive spirit with you!",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Set",
+      "id": "13e9d606-f2e3-47ee-a0e3-354074b9ad0b",
+      "variable": "danny2",
+      "value": "1",
+      "next": "ade1cb24-54bf-458d-8624-4ca59da18b49"
+    },
+    {
+      "type": "Text",
+      "id": "ade1cb24-54bf-458d-8624-4ca59da18b49",
+      "actor": "Tory Narra",
+      "name": "Wow, you really knew what to say. I think you really have a chance, but you better watch out for that Aangrump.",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Text",
+      "id": "74759041-d328-494b-bc9d-93f7d676a919",
+      "actor": "Tory Narra",
+      "name": "You better get ready for the next game. Good luck, and remember what I said. Both your games and talking are important to getting the date you want.",
+      "next": "4e0201a4-a98d-41b2-b60d-347c4cfeaf11"
+    },
+    {
+      "type": "Text",
+      "id": "73fbea98-dddb-400f-bfc7-3ade42c41837",
+      "actor": "Dark SilverSpark",
+      "name": "Hey, what are you playing this game for anyway?",
+      "choices": [ "b71aa52c-92bf-456f-a72a-1d241062d172", "13ab96bb-8958-4f13-9b3e-3a22fdc9fcab" ]
+    },
+    {
+      "type": "Choice",
+      "id": "b71aa52c-92bf-456f-a72a-1d241062d172",
+      "title": "Fun! (risky option)",
+      "name": "I just wanted to have fun and make some new, cool friends!",
+      "next": "904e2781-da0a-451f-8e24-c8942e02c853"
+    },
+    {
+      "type": "Choice",
+      "id": "13ab96bb-8958-4f13-9b3e-3a22fdc9fcab",
+      "title": "I wanna be the best!",
+      "name": "I love watching soccer on TV. I wanna be the very best like no one ever was!",
+      "next": "a63180d8-c04e-4bb2-a67f-5787a7d60e2d"
+    },
+    {
+      "type": "Text",
+      "id": "904e2781-da0a-451f-8e24-c8942e02c853",
+      "actor": "Dark SilverSpark",
+      "name": "That's why?\nWell that pathetic attitude won't get you anywhere! The next game is ours for sure then!",
+      "next": "cda04870-6f6f-40d9-b08e-6be0fd7747b5"
+    },
+    {
+      "type": "Text",
+      "id": "a63180d8-c04e-4bb2-a67f-5787a7d60e2d",
+      "actor": "Dark SilverSpark",
+      "name": "Not if I can help it! If anyone's gonna be number one, It'll be me, for sure!",
+      "next": "fe026209-411c-41b8-a760-235b037ecd9a"
+    },
+    {
+      "type": "Set",
+      "id": "cda04870-6f6f-40d9-b08e-6be0fd7747b5",
+      "variable": "silverSparkNeg",
+      "value": "1",
+      "next": "256a2e5d-dce1-4d82-84d0-eb124b87db31"
+    },
+    {
+      "type": "Text",
+      "id": "256a2e5d-dce1-4d82-84d0-eb124b87db31",
+      "actor": "Tory Narra",
+      "name": "Oof, She may cramp your soccer style, but if you really like her, you gotta make sure you win that next game too!",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Text",
+      "id": "5b15d614-fd46-4a93-93cb-7b740f6582c6",
+      "actor": "Tory Narra",
+      "name": "Wow. She seems like a tough cookie to crack, but don't worry, I can tell she thinks you're cute.",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Set",
+      "id": "fe026209-411c-41b8-a760-235b037ecd9a",
+      "variable": "silver2",
+      "value": "1",
+      "next": "5b15d614-fd46-4a93-93cb-7b740f6582c6"
+    },
+    {
+      "type": "Text",
+      "id": "4ac3c36e-8ffe-4059-80e7-e2bdd5efa1ef",
+      "actor": "Tory Narra",
+      "name": "Yeah, She may not be the one for you. You should try your luck with Danny.--",
+      "next": "74759041-d328-494b-bc9d-93f7d676a919"
+    },
+    {
+      "type": "Action",
+      "id": "30bfa2ca-a216-428e-8ccd-c8c7ef44e1c6",
+      "actor": "",
+      "descname": "Start Game #2",
+      "uniquename": "startGame",
+      "desc": "Here we go! If you want Sam or Silver, you better win this one!0-",
+      "next": "fb915161-755a-4d9f-9cce-459dbdd0be7e"
+    },
+    {
+      "type": "Text",
+      "id": "1c0f935e-f1ee-44ac-a371-0c25bcc916fc",
+      "actor": "Tory Narra",
+      "name": "Once again, great job, but now it's time to build your relationship.\nPick your Poison",
+      "choices": [ "aa144ee9-0a90-495c-9aa6-cc2757a0a382", "bdf79556-8e2e-4900-a869-2a9d5349e8d0", "91309504-2d6c-4350-bb3e-628aad57e766" ]
+    },
+    {
+      "type": "Choice",
+      "id": "bdf79556-8e2e-4900-a869-2a9d5349e8d0",
+      "title": "Talk to Danny Lover",
+      "name": "If you love Danny, let him know it with your kind words.",
+      "next": "269f9dd1-654e-4b76-848d-501c788f1387"
+    },
+    {
+      "type": "Choice",
+      "id": "aa144ee9-0a90-495c-9aa6-cc2757a0a382",
+      "title": "Talk to Sam Hedgehog",
+      "name": "He's all about the sport And scoring a goal is the key to the door to his heart.",
+      "next": "f89fd58a-a50f-486c-9ca4-eebf9821db00"
+    },
+    {
+      "type": "Branch",
+      "id": "f89fd58a-a50f-486c-9ca4-eebf9821db00",
+      "variable": "game2Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "a4cf2156-b659-41a1-844f-eca0b8652e83"
+        },
+        {
+          "value": "_default",
+          "target": "8a886ac3-eac6-45e5-8a9b-869635a955e9"
+        }
+      ]
+    },
+    {
+      "type": "Choice",
+      "id": "91309504-2d6c-4350-bb3e-628aad57e766",
+      "title": "Dark SilverSpark",
+      "name": "She's mysterious and tough, you'll really have to be something special to win her over/",
+      "next": "0d53dc89-c0c1-4eff-9ac3-60204b4a1370"
+    },
+    {
+      "type": "Branch",
+      "id": "269f9dd1-654e-4b76-848d-501c788f1387",
+      "variable": "game2Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "68f3ef70-2d9b-403d-bf55-a23b9a0459a4"
+        },
+        {
+          "value": "_default",
+          "target": "1b161080-b4f7-4cf1-b16b-db94f213ab4d"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "0d53dc89-c0c1-4eff-9ac3-60204b4a1370",
+      "variable": "game2Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "7e65fdda-511b-493e-845d-6164762f1ff1"
+        },
+        {
+          "value": "_default",
+          "target": "f3e96f72-c0ee-4cc2-b6c8-9a574d42a2b4"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "8a886ac3-eac6-45e5-8a9b-869635a955e9",
+      "actor": "Sam Hedgehog",
+      "name": "Yeah! Victory is ours. Sick match though. Better luck next time.",
+      "next": "6b6b0a10-b4ed-492c-8ebc-804548134870"
+    },
+    {
+      "type": "Text",
+      "id": "a4cf2156-b659-41a1-844f-eca0b8652e83",
+      "actor": "Sam Hedgehog",
+      "name": "Yikes you beat us! You really know your way around the field, but I'll get you next game.",
+      "next": "b8a759d3-929d-4a04-b71e-8d501b7ce234"
+    },
+    {
+      "type": "Text",
+      "id": "1b161080-b4f7-4cf1-b16b-db94f213ab4d",
+      "actor": "Danny Lover",
+      "name": "Aww we didn't win, but we tried our best. We'll definitly get them next time!",
+      "next": "9a853069-5942-40df-a23d-7fe5294543a1"
+    },
+    {
+      "type": "Text",
+      "id": "68f3ef70-2d9b-403d-bf55-a23b9a0459a4",
+      "actor": "Danny Lover",
+      "name": "Heck yeah! We beat them!!! That was such a fun game.",
+      "next": "9a853069-5942-40df-a23d-7fe5294543a1"
+    },
+    {
+      "type": "Text",
+      "id": "f3e96f72-c0ee-4cc2-b6c8-9a574d42a2b4",
+      "actor": "Dark SilverSpark",
+      "name": "Aww Yeah TAKE THAT!!!! We gotcha that time, just like I knew we would!",
+      "next": "d7f79837-798a-4362-82f0-b37bcd4cdeec"
+    },
+    {
+      "type": "Text",
+      "id": "7e65fdda-511b-493e-845d-6164762f1ff1",
+      "actor": "Dark SilverSpark",
+      "name": "Dang it! I thought for sure we had you!",
+      "next": "cc6f5277-2010-4f4f-806d-7695a2720692"
+    },
+    {
+      "type": "Text",
+      "id": "b8a759d3-929d-4a04-b71e-8d501b7ce234",
+      "actor": "Tory Narra",
+      "name": "(I think he's swooning!!!)",
+      "next": "6b6b0a10-b4ed-492c-8ebc-804548134870"
+    },
+    {
+      "type": "Text",
+      "id": "6b6b0a10-b4ed-492c-8ebc-804548134870",
+      "actor": "Sam Hedgehog",
+      "name": "So would you say you're more of a team player, or a lone wolf?",
+      "choices": [ "47ac6b34-6aae-4646-9d81-af110760fa3d", "5d215e65-b801-4a75-b2c9-39898e0316ad" ]
+    },
+    {
+      "type": "Choice",
+      "id": "47ac6b34-6aae-4646-9d81-af110760fa3d",
+      "title": "Loner",
+      "name": "I wanna be the star of the show!",
+      "next": "bb377f5d-8f83-46dc-af4d-d436e699e13a"
+    },
+    {
+      "type": "Choice",
+      "id": "5d215e65-b801-4a75-b2c9-39898e0316ad",
+      "title": "Friends!",
+      "name": "I try to help out as much as I can,  and don't worry about being the one to score the goal as long as we get the point.",
+      "next": "dc3b9cb2-e709-47a2-aff3-9cf99b9b654c"
+    },
+    {
+      "type": "Text",
+      "id": "dc3b9cb2-e709-47a2-aff3-9cf99b9b654c",
+      "actor": "Sam Hedgehog",
+      "name": "My team mates are great and all, but I try to make myself the main event by taking the lead and powering through.",
+      "next": "ff5adb5a-c418-4a86-a043-94145d8f83c9"
+    },
+    {
+      "type": "Text",
+      "id": "bb377f5d-8f83-46dc-af4d-d436e699e13a",
+      "actor": "Sam Hedgehog",
+      "name": "Hey me too! I like to try to do all the heavy lifting. I get in first and become the main event. Some people call me a ball hog instead of a hedgehog!",
+      "next": "22861530-1c9e-4298-9492-001337dfeeeb"
+    },
+    {
+      "type": "Set",
+      "id": "22861530-1c9e-4298-9492-001337dfeeeb",
+      "variable": "sam3",
+      "value": "1",
+      "next": "ff5adb5a-c418-4a86-a043-94145d8f83c9"
+    },
+    {
+      "type": "Text",
+      "id": "9a853069-5942-40df-a23d-7fe5294543a1",
+      "actor": "Danny Lover",
+      "name": "So, do you think you're more of a team player or a lone wolf?",
+      "choices": [ "ad77a4a9-0cba-4de4-9a4a-805f2e8e2707", "96273df8-3d6e-47a7-9588-8c2f076897af" ]
+    },
+    {
+      "type": "Choice",
+      "id": "ad77a4a9-0cba-4de4-9a4a-805f2e8e2707",
+      "title": "Loner!",
+      "name": "I prefer to keep the ball to myself and do all the heavy lifting. I don't like loosing control. I wanna be the star of the show!",
+      "next": "a225eb74-45d4-44a9-9709-c4dff476a3bb"
+    },
+    {
+      "type": "Choice",
+      "id": "96273df8-3d6e-47a7-9588-8c2f076897af",
+      "title": "Friends!",
+      "name": "I don't mind if I'm the one to score, as long as we get the point!.",
+      "next": "87743f4a-c92d-4a4a-b898-43466d95e36f"
+    },
+    {
+      "type": "Text",
+      "id": "ff5adb5a-c418-4a86-a043-94145d8f83c9",
+      "actor": "Sam Hedgehog",
+      "name": "All right! Well I'll catch you at the next match, and I'll beat ya next time",
+      "next": "f01d3ce9-1257-46ce-9639-dcb8cd92436f"
+    },
+    {
+      "type": "Text",
+      "id": "a225eb74-45d4-44a9-9709-c4dff476a3bb",
+      "actor": "Danny Lover",
+      "name": "Oh, okay. I like to be a team player. I think  Aarin Aangrump and I have some great team work going\nWell, catch ya later.",
+      "next": "1200460b-5276-448c-b48b-7de5bb8a9e68"
+    },
+    {
+      "type": "Text",
+      "id": "87743f4a-c92d-4a4a-b898-43466d95e36f",
+      "actor": "Danny Lover",
+      "name": "Yeah! I think it's much more fun to play together anyway. I'd take good teamwork over glory any day.",
+      "next": "538e9c3c-29c4-4ba4-9da6-72f57f4fdce6"
+    },
+    {
+      "type": "Text",
+      "id": "42d0acab-98eb-41f8-b0d5-dab7c6a22352",
+      "actor": "Danny Lover",
+      "name": "Well, anyway, catcha later. I'm sure we'll both do great on the next game!",
+      "next": "da76efde-7f57-49c2-acc8-43ba2a176d9c"
+    },
+    {
+      "type": "Set",
+      "id": "538e9c3c-29c4-4ba4-9da6-72f57f4fdce6",
+      "variable": "danny3",
+      "value": "1",
+      "next": "42d0acab-98eb-41f8-b0d5-dab7c6a22352"
+    },
+    {
+      "type": "Text",
+      "id": "1200460b-5276-448c-b48b-7de5bb8a9e68",
+      "actor": "Tory Narra",
+      "name": "That was rough. He's about the team, no so much the game.",
+      "next": "567b1de3-df9b-4247-b9b2-510c45e90381"
+    },
+    {
+      "type": "Branch",
+      "id": "567b1de3-df9b-4247-b9b2-510c45e90381",
+      "variable": "danny2",
+      "branches": [
+        {
+          "value": "1",
+          "target": "b7fd3258-8602-4494-bcc4-0dd7a3856745"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "b7fd3258-8602-4494-bcc4-0dd7a3856745",
+      "actor": "Tory Narra",
+      "name": "You may still have a chance, though. Your last time talking was pretty good.",
+      "next": "f01d3ce9-1257-46ce-9639-dcb8cd92436f"
+    },
+    {
+      "type": "Text",
+      "id": "da76efde-7f57-49c2-acc8-43ba2a176d9c",
+      "actor": "Tory Narra",
+      "name": "Wow! He really seems to like you. I like your chances!",
+      "next": "f01d3ce9-1257-46ce-9639-dcb8cd92436f"
+    },
+    {
+      "type": "Branch",
+      "id": "cc6f5277-2010-4f4f-806d-7695a2720692",
+      "variable": "silverSparkNeg",
+      "branches": [
+        {
+          "value": "1",
+          "target": "659aea00-4b92-452d-a609-a2440fc6c5d1"
+        },
+        {
+          "value": "_default",
+          "target": "d7f79837-798a-4362-82f0-b37bcd4cdeec"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "659aea00-4b92-452d-a609-a2440fc6c5d1",
+      "actor": "Dark SilverSpark",
+      "name": "Hey! Didn't you say you just played for fun?\nAND YOU STILL WON???\nHow can that be? I had the firey spirit of vicrory",
+      "next": "d3d893aa-9dff-4373-964b-750a810b30c3"
+    },
+    {
+      "type": "Text",
+      "id": "d3d893aa-9dff-4373-964b-750a810b30c3",
+      "actor": "Dark SilverSpark",
+      "name": "Oooohhhhh maybe you're right about that.\nBut whatever",
+      "next": "c04eaa42-5a27-4a5d-983a-88802032f79b"
+    },
+    {
+      "type": "Set",
+      "id": "c04eaa42-5a27-4a5d-983a-88802032f79b",
+      "variable": "silver2",
+      "value": "1",
+      "next": "9d0eb0e7-beaa-4555-add2-49a88d00b6ff"
+    },
+    {
+      "type": "Text",
+      "id": "04055419-5084-47de-8e7e-6ae16166e676",
+      "actor": "Dark SilverSpark",
+      "name": "WE'RE STILL GONNA KICK YOUR BUTT NEXT GAME!!!!!!!!!!!!!!!!!!",
+      "next": "d7f79837-798a-4362-82f0-b37bcd4cdeec"
+    },
+    {
+      "type": "Set",
+      "id": "9d0eb0e7-beaa-4555-add2-49a88d00b6ff",
+      "variable": "silverSparkNeg",
+      "value": "0",
+      "next": "04055419-5084-47de-8e7e-6ae16166e676"
+    },
+    {
+      "type": "Text",
+      "id": "d7f79837-798a-4362-82f0-b37bcd4cdeec",
+      "actor": "Dark SilverSpark",
+      "name": "So, don't you just love to watch the other team lose?",
+      "choices": [ "5965c3c5-ef23-46e3-9fa3-2847b7f39a03", "51546b4e-944a-4200-b00d-254dcd5b6e35" ]
+    },
+    {
+      "type": "Choice",
+      "id": "5965c3c5-ef23-46e3-9fa3-2847b7f39a03",
+      "title": "Of course!",
+      "name": "Yeah, they better move over because I'm gonna be the best!",
+      "next": "f8f3571d-e904-403e-a8bd-b50645b6f943"
+    },
+    {
+      "type": "Choice",
+      "id": "51546b4e-944a-4200-b00d-254dcd5b6e35",
+      "title": "I don't mind",
+      "name": "Sure I like to win, but It's not everything, and I just want us all to have fun.",
+      "next": "258ca485-03b0-4c80-8eea-b33b8d877a71"
+    },
+    {
+      "type": "Text",
+      "id": "f8f3571d-e904-403e-a8bd-b50645b6f943",
+      "actor": "Dark SilverSpark",
+      "name": "That's the spirit! Except, I'm gonna be better.",
+      "next": "ce8e8fd9-d6f0-4e95-84c0-e9f03e3c7685"
+    },
+    {
+      "type": "Text",
+      "id": "258ca485-03b0-4c80-8eea-b33b8d877a71",
+      "actor": "Dark SilverSpark",
+      "name": "Well then I guess you'll have fun watching me totally destroy your team next game!",
+      "next": "ee2c3c4b-9165-42bd-b097-f97bc86aad84"
+    },
+    {
+      "type": "Text",
+      "id": "ee2c3c4b-9165-42bd-b097-f97bc86aad84",
+      "actor": "Tory Narra",
+      "name": "Hmm I don't know about this. Her standards are high. You're gonna have to win the games and smooth talking to score a goal in her net!!!",
+      "next": "588da895-46bc-44be-997d-cbab7c932f7e"
+    },
+    {
+      "type": "Branch",
+      "id": "a4734874-db57-4793-86bf-a680518b6f82",
+      "variable": "silverSparkNeg",
+      "branches": [
+        {
+          "value": "0",
+          "target": "a6420851-e4e8-474f-8fae-d17e5587fb1f"
+        },
+        {
+          "value": "_default",
+          "target": "588da895-46bc-44be-997d-cbab7c932f7e"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "a6420851-e4e8-474f-8fae-d17e5587fb1f",
+      "actor": "Dark SilverSpark",
+      "name": "Hey, you're pretty cool. We should totally hang out some time after a game. I can help you lick your wounds!!!!!",
+      "next": "70a79073-e037-4072-bf3c-e74a1c21cdae"
+    },
+    {
+      "type": "Set",
+      "id": "ce8e8fd9-d6f0-4e95-84c0-e9f03e3c7685",
+      "variable": "silver3",
+      "value": "1",
+      "next": "a4734874-db57-4793-86bf-a680518b6f82"
+    },
+    {
+      "type": "Text",
+      "id": "588da895-46bc-44be-997d-cbab7c932f7e",
+      "actor": "Dark SilverSpark",
+      "name": "Alright. Gotta go. I'll see you at the next game.",
+      "next": "f01d3ce9-1257-46ce-9639-dcb8cd92436f"
+    },
+    {
+      "type": "Text",
+      "id": "70a79073-e037-4072-bf3c-e74a1c21cdae",
+      "actor": "Tory Narra",
+      "name": "Wow, it seems like you two are really hitting it off. At first, I wasn't so sure, but I think you have a chance now.",
+      "next": "588da895-46bc-44be-997d-cbab7c932f7e"
+    },
+    {
+      "type": "Text",
+      "id": "f01d3ce9-1257-46ce-9639-dcb8cd92436f",
+      "actor": "Tory Narra",
+      "name": "Alright everyone, I'ts almost time for our t --game!!!",
+      "next": "5e86232d-3c68-46ad-b811-9aac0fed286b"
+    },
+    {
+      "type": "Action",
+      "id": "5e86232d-3c68-46ad-b811-9aac0fed286b",
+      "actor": "",
+      "descname": "Play Ball",
+      "uniquename": "startGame",
+      "desc": "Start The Final Game!",
+      "next": "e7af9a45-34f7-40ee-97e4-5796cdf56c76"
+    },
+    {
+      "type": "Text",
+      "id": "5c20dd41-ad15-47a1-94f4-2336e78431ae",
+      "actor": "Tory Narra",
+      "name": "That was the last game. Now Here's your last chance to talk to who you want to date before the end of the season!",
+      "next": "e5e0410d-ec50-4798-9bb4-c51da7b8f68b"
+    },
+    {
+      "type": "Text",
+      "id": "e5e0410d-ec50-4798-9bb4-c51da7b8f68b",
+      "actor": "Tory Narra",
+      "name": "Who will it be?",
+      "choices": [ "f563ed70-6d7a-4352-9b32-0b5f0be8afb0", "605b8c05-cf65-4549-857b-8ff3fd9b5f69", "cfdd8d4d-9b5b-49a0-a109-1431959fa7fe" ]
+    },
+    {
+      "type": "Choice",
+      "id": "605b8c05-cf65-4549-857b-8ff3fd9b5f69",
+      "title": "Talk to Sam Hedgehog",
+      "name": "He's all about the sport And scoring a goal is the key to the door to his heart.",
+      "next": "9087ac05-12e3-4926-8639-4b8dc6cbce4d"
+    },
+    {
+      "type": "Choice",
+      "id": "f563ed70-6d7a-4352-9b32-0b5f0be8afb0",
+      "title": "Talk to Danny Lover",
+      "name": "If you love Danny, let him know it with your kind words.",
+      "next": "9101e90f-c091-4579-8ad3-a81480b40f20"
+    },
+    {
+      "type": "Choice",
+      "id": "cfdd8d4d-9b5b-49a0-a109-1431959fa7fe",
+      "title": "Dark SilverSpark",
+      "name": "She's mysterious and tough, you'll really have to be something special to win her over/",
+      "next": "5e182327-9d4e-4aad-aabc-563388c0a028"
+    },
+    {
+      "type": "Branch",
+      "id": "9087ac05-12e3-4926-8639-4b8dc6cbce4d",
+      "variable": "game3Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "0cf65b84-2c6c-40ec-a963-4f113ca992f1"
+        },
+        {
+          "value": "_default",
+          "target": "37db924b-2092-4e1d-9253-521b59a68988"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "9101e90f-c091-4579-8ad3-a81480b40f20",
+      "variable": "game3Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "78cd9651-4ac2-4cc0-93e8-0dc1e2e23f54"
+        },
+        {
+          "value": "_default",
+          "target": "d771be03-b67c-4bcc-b1cc-477d5ecdb2ad"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "5e182327-9d4e-4aad-aabc-563388c0a028",
+      "variable": "game3Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "a8fda87c-49b4-49c5-b0fe-8e3de5325090"
+        },
+        {
+          "value": "_default",
+          "target": "25ba166d-1f01-4c6d-8a19-595d8e6201d8"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "d771be03-b67c-4bcc-b1cc-477d5ecdb2ad",
+      "actor": "Danny Lover",
+      "name": "Hey, that was a great last game we played. We didn't win this time, but there's always next season! I think our team worked really well together",
+      "next": "e0d659b8-8e59-4f13-943c-cb24ed08f312"
+    },
+    {
+      "type": "Text",
+      "id": "78cd9651-4ac2-4cc0-93e8-0dc1e2e23f54",
+      "actor": "Danny Lover",
+      "name": "Heck yeah we won the last game of the season! I had a great time playing with you and I think our team work was really on point.",
+      "next": "e0d659b8-8e59-4f13-943c-cb24ed08f312"
+    },
+    {
+      "type": "Text",
+      "id": "25ba166d-1f01-4c6d-8a19-595d8e6201d8",
+      "actor": "Dark SilverSpark",
+      "name": "WOO HOO We won the last game of the season!!! that was awesome. First this, then the world cup!!!",
+      "next": "447b1e70-fe22-445d-b03b-84bd2e4467a9"
+    },
+    {
+      "type": "Text",
+      "id": "a8fda87c-49b4-49c5-b0fe-8e3de5325090",
+      "actor": "Dark SilverSpark",
+      "name": "CRAP I CAN\"T BELIEVE IT!!!! OUR LAST GAME!!!!!!! And how could I have lost to you?????",
+      "next": "447b1e70-fe22-445d-b03b-84bd2e4467a9"
+    },
+    {
+      "type": "Text",
+      "id": "37db924b-2092-4e1d-9253-521b59a68988",
+      "actor": "Sam Hedgehog",
+      "name": "GOOOOOOAAAAAAAAALLLLLLLL\nHeck yeah!!! Team CosmoKNOTS won! This is happnen. You gave us a tough game, but we'll get you next year!",
+      "next": "38b51787-2d67-43d4-b344-921599fbaaea"
+    },
+    {
+      "type": "Text",
+      "id": "0cf65b84-2c6c-40ec-a963-4f113ca992f1",
+      "actor": "Sam Hedgehog",
+      "name": "Aww nuts! You guys beat us, and that's no good! It was a great game though. I'll train extra hard and come back to give you a mega beat down next year!",
+      "next": "38b51787-2d67-43d4-b344-921599fbaaea"
+    },
+    {
+      "type": "Text",
+      "id": "e0d659b8-8e59-4f13-943c-cb24ed08f312",
+      "actor": "Danny Lover",
+      "name": "So do you like the tried and true, or are you always looking for something new?",
+      "choices": [ "b769a884-6e9d-43c5-b4f6-de8ed1636cd4", "c15ce8ac-0abc-4e96-8c6c-d0c5c42eb870" ]
+    },
+    {
+      "type": "Text",
+      "id": "38b51787-2d67-43d4-b344-921599fbaaea",
+      "actor": "Sam Hedgehog",
+      "name": "So do you like the tried and true, or are you always looking for something new?",
+      "choices": [ "2400c621-8b74-4f2f-861e-ef9643323d89", "a9594648-3af5-4467-be40-2a062a916cbc" ]
+    },
+    {
+      "type": "Text",
+      "id": "447b1e70-fe22-445d-b03b-84bd2e4467a9",
+      "actor": "Dark SilverSpark",
+      "name": "Well, that was a pretty exciting match though. At least we can end the season on that.",
+      "next": "84b1f477-7153-4e5c-b57a-362c4719456a"
+    },
+    {
+      "type": "Choice",
+      "id": "a9594648-3af5-4467-be40-2a062a916cbc",
+      "title": "Adventure!",
+      "name": "I love trying new things. That's one of the things that got me into soccer.",
+      "next": "23c04022-ff79-4a7f-9e93-30e1d788f22e"
+    },
+    {
+      "type": "Choice",
+      "id": "2400c621-8b74-4f2f-861e-ef9643323d89",
+      "title": "Tradition",
+      "name": "I prefer to stick to what I know and enjoy- Sometimes I like trying new things, but I can get nervous",
+      "next": "fc660604-dddc-49d0-94e4-5f53f0d304b1"
+    },
+    {
+      "type": "Choice",
+      "id": "c15ce8ac-0abc-4e96-8c6c-d0c5c42eb870",
+      "title": "Adventure!",
+      "name": "I love trying new things. That's one of the things that got me into soccer.",
+      "next": "44133674-fe35-430e-a9d0-06ed894924e2"
+    },
+    {
+      "type": "Choice",
+      "id": "b769a884-6e9d-43c5-b4f6-de8ed1636cd4",
+      "title": "Tradition",
+      "name": "I prefer to stick to what I know and enjoy- Sometimes I like trying new things, but I can get nervous",
+      "next": "ecdb0e13-3a84-4d69-8371-9f3ec725ae16"
+    },
+    {
+      "type": "Text",
+      "id": "23c04022-ff79-4a7f-9e93-30e1d788f22e",
+      "actor": "Sam Hedgehog",
+      "name": "Yeah, I know what you mean. I don't like to hang around for long I go where my legs take me! I start to get bored, then I gotta juice!",
+      "next": "31df0022-b244-405f-b51e-4312bf8530dd"
+    },
+    {
+      "type": "Text",
+      "id": "fc660604-dddc-49d0-94e4-5f53f0d304b1",
+      "actor": "Sam Hedgehog",
+      "name": "That slomo stuffs not really for me. I gotta keep it moving, see new things. I dont' like to hang around. I gotta go fast!",
+      "next": "08d42a75-16f0-4838-a267-63cc8143f056"
+    },
+    {
+      "type": "Text",
+      "id": "44133674-fe35-430e-a9d0-06ed894924e2",
+      "actor": "Danny Lover",
+      "name": "I love a good adventure every now and then, but I get tired of moving around, and sometimes, homesick.",
+      "next": "016ab24b-5de1-497c-ba8a-a7b8fcb6fa59"
+    },
+    {
+      "type": "Text",
+      "id": "ecdb0e13-3a84-4d69-8371-9f3ec725ae16",
+      "actor": "Danny Lover",
+      "name": "Yeah, me too!",
+      "next": "a474fc9b-0c14-40d0-9cb8-5fbbd19663e7"
+    },
+    {
+      "type": "Set",
+      "id": "31df0022-b244-405f-b51e-4312bf8530dd",
+      "variable": "sam5",
+      "value": "1",
+      "next": "08d42a75-16f0-4838-a267-63cc8143f056"
+    },
+    {
+      "type": "Text",
+      "id": "08d42a75-16f0-4838-a267-63cc8143f056",
+      "actor": "Sam Hedgehog",
+      "name": "I gotta speed on home and get ready for the after party. I'll cya there!!!--",
+      "next": "f211216d-a2db-426b-9c5c-5f2cf85b95dc"
+    },
+    {
+      "type": "Set",
+      "id": "016ab24b-5de1-497c-ba8a-a7b8fcb6fa59",
+      "variable": "danny5",
+      "value": "1",
+      "next": "a474fc9b-0c14-40d0-9cb8-5fbbd19663e7"
+    },
+    {
+      "type": "Text",
+      "id": "a474fc9b-0c14-40d0-9cb8-5fbbd19663e7",
+      "actor": "Danny Lover",
+      "name": "Okay, well I'll see you later! Great season we played!-",
+      "next": "f211216d-a2db-426b-9c5c-5f2cf85b95dc"
+    },
+    {
+      "type": "Text",
+      "id": "84b1f477-7153-4e5c-b57a-362c4719456a",
+      "actor": "Dark SilverSpark",
+      "name": "Hey, how long do you think you'll be playing this game for? Ya gonna stick around?",
+      "choices": [ "fbd6dbfd-dcb7-4fff-96a5-cf5216cc8abb", "3196c7d2-d7d3-4ef6-92d7-169104ad670e" ]
+    },
+    {
+      "type": "Choice",
+      "id": "3196c7d2-d7d3-4ef6-92d7-169104ad670e",
+      "title": "Just for as long as I find it fun",
+      "name": "I love this game, and I wanna keep playing it until as long as I get the chance.",
+      "next": "1f8b51a2-dbe5-42a2-af63-667356c99034"
+    },
+    {
+      "type": "Choice",
+      "id": "fbd6dbfd-dcb7-4fff-96a5-cf5216cc8abb",
+      "title": "Until I go pro!",
+      "name": "I'm gonna play till the spotlights on me and I score the world's best game winning goal!",
+      "next": "feaee5ec-8f95-4a24-8a1d-c1cef611f9ce"
+    },
+    {
+      "type": "Text",
+      "id": "feaee5ec-8f95-4a24-8a1d-c1cef611f9ce",
+      "actor": "Dark SilverSpark",
+      "name": "Yeah, me too! I'm gonna play until I get what I want!",
+      "next": "bd003d2d-cb1b-4d72-b46a-939ea7770c9d"
+    },
+    {
+      "type": "Text",
+      "id": "1f8b51a2-dbe5-42a2-af63-667356c99034",
+      "actor": "Dark SilverSpark",
+      "name": "Well then, if you like this sport so much, I guess you'll have fun watching me win the world cup on TV one day!",
+      "next": "64ca0071-d7ff-404e-859f-a532c3004247"
+    },
+    {
+      "type": "Set",
+      "id": "bd003d2d-cb1b-4d72-b46a-939ea7770c9d",
+      "variable": "silver5",
+      "value": "1",
+      "next": "591b497d-3a2e-442d-8380-5d0459f599d5"
+    },
+    {
+      "type": "Text",
+      "id": "591b497d-3a2e-442d-8380-5d0459f599d5",
+      "actor": "Dark SilverSpark",
+      "name": "Well I say it was a good season. I'll see you at the after party. Maybe we could hang out together!",
+      "next": "f211216d-a2db-426b-9c5c-5f2cf85b95dc"
+    },
+    {
+      "type": "Text",
+      "id": "64ca0071-d7ff-404e-859f-a532c3004247",
+      "actor": "Dark SilverSpark",
+      "name": "Well, anway, catcha at the after party",
+      "next": "f211216d-a2db-426b-9c5c-5f2cf85b95dc"
+    },
+    {
+      "type": "Text",
+      "id": "f211216d-a2db-426b-9c5c-5f2cf85b95dc",
+      "actor": "Tory Narra",
+      "name": "Alright everyone! Great game. Now you must go one home and get ready for the after party. I'll see you there!",
+      "next": null
+    },
+    {
+      "type": "Set",
+      "id": "c3249903-8dc7-485c-9370-c8cd55786382",
+      "variable": "emote",
+      "value": "toryAnnoyed",
+      "next": "bd0ee079-672a-45e3-98a7-72411dff854c"
+    },
+    {
+      "type": "Action",
+      "id": "7570d556-503d-42da-9c4b-1bf6247481ab",
+      "actor": "",
+      "descname": "AfterFirstGame",
+      "uniquename": "afterFirstGame",
+      "desc": "AfterFirstGame",
+      "next": "b9627fdd-3a9c-4d29-adb7-deb018f9d495"
+    },
+    {
+      "type": "Set",
+      "id": "8576bdfa-36f1-4baf-9e1b-a670603ee6f5",
+      "variable": "emote",
+      "value": "toryConfident",
+      "next": "c2d40625-dad4-4d68-b21d-c265f9f94be8"
+    },
+    {
+      "type": "Set",
+      "id": "4c8546b7-5103-4838-a524-fc7e74c7f4c9",
+      "variable": "",
+      "value": "",
+      "next": "8f595d61-e341-48b9-84aa-69fe4f60242c"
+    },
+    {
+      "type": "Set",
+      "id": "b56b7588-d7b8-45d1-95c7-5f8b49638612",
+      "variable": "emote",
+      "value": "samConfident",
+      "next": "8bffb771-c47a-43b9-947a-5559bbe82915"
+    },
+    {
+      "type": "Action",
+      "id": "e7af9a45-34f7-40ee-97e4-5796cdf56c76",
+      "actor": "",
+      "descname": "AFter last game",
+      "uniquename": "afterLastGame",
+      "desc": "After the first game",
+      "next": "5c20dd41-ad15-47a1-94f4-2336e78431ae"
+    },
+    {
+      "type": "Action",
+      "id": "bd0ee079-672a-45e3-98a7-72411dff854c",
+      "actor": "",
+      "uniquename": "emote",
+      "next": "445ae404-07b6-4d6e-92cb-bd16297fd07a"
+    },
+    {
+      "type": "Action",
+      "id": "c2d40625-dad4-4d68-b21d-c265f9f94be8",
+      "actor": "",
+      "uniquename": "emote",
+      "next": "e2960855-f5d6-4c35-85c1-d7692dbee7ac"
+    },
+    {
+      "type": "Set",
+      "id": "5c9b9f0d-6c74-407e-9c23-88888ca025fe",
+      "variable": "emote",
+      "value": "toryNeutral",
+      "next": "3c63475a-97d8-4d08-87f9-46d176e37597"
+    },
+    {
+      "type": "Action",
+      "id": "3c63475a-97d8-4d08-87f9-46d176e37597",
+      "actor": "",
+      "uniquename": "emote",
+      "next": "38d1de50-1bbd-49a2-bc6f-fab2af0846c6"
+    },
+    {
+      "type": "Action",
+      "id": "8f595d61-e341-48b9-84aa-69fe4f60242c",
+      "actor": "",
+      "uniquename": "emote",
+      "next": "11f28c1a-b2d8-4222-97fa-2c1926fa7334"
+    },
+    {
+      "type": "Action",
+      "id": "8bffb771-c47a-43b9-947a-5559bbe82915",
+      "actor": "",
+      "uniquename": "emote",
+      "next": "70b048a2-3430-4b1e-b793-4ca1ceec0652"
+    },
+    {
+      "type": "Action",
+      "id": "fb915161-755a-4d9f-9cce-459dbdd0be7e",
+      "actor": "",
+      "uniquename": "afterSecondGame",
+      "next": "1c0f935e-f1ee-44ac-a371-0c25bcc916fc"
+    },
+
+    {
+      "type": "Branch",
+      "id": "35a9e7eb-33f1-4f6f-abc3-891861ab5969",
+      "variable": "sam2",
+      "branches": [
+        {
+          "value": "1",
+          "target": "e9d14ac3-f1f0-4b0a-ad8a-347f06bf0d5c"
+        },
+        {
+          "value": "_default",
+          "target": "dbf075a1-b6ff-4f94-80b2-9ad4db0b136d"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "e9d14ac3-f1f0-4b0a-ad8a-347f06bf0d5c",
+      "variable": "sam3",
+      "branches": [
+        {
+          "value": "1",
+          "target": "b2e72d14-fd17-4b2a-9c8a-5282d7134d1a"
+        },
+        {
+          "value": "_default",
+          "target": "d4b73995-ecfa-438f-922b-e87db9ff5762"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "b2e72d14-fd17-4b2a-9c8a-5282d7134d1a",
+      "variable": "sam4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "bd9a3e30-a136-46cb-b515-ac2e2e219f2a"
+        },
+        {
+          "value": "_default",
+          "target": "7eadcccf-c9c7-4052-b9f0-ccd987f384c4"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "bd9a3e30-a136-46cb-b515-ac2e2e219f2a",
+      "variable": "sams",
+      "value": "3",
+      "next": "82d7b431-161e-4d98-8182-5e254bb45104"
+    },
+    {
+      "type": "Branch",
+      "id": "dbf075a1-b6ff-4f94-80b2-9ad4db0b136d",
+      "variable": "sam3",
+      "branches": [
+        {
+          "value": "1",
+          "target": "d4b73995-ecfa-438f-922b-e87db9ff5762"
+        },
+        {
+          "value": "_default",
+          "target": "dbc855fe-6e27-494f-91ce-eddee6453024"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "d4b73995-ecfa-438f-922b-e87db9ff5762",
+      "variable": "sam4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "7eadcccf-c9c7-4052-b9f0-ccd987f384c4"
+        },
+        {
+          "value": "_default",
+          "target": "924786d6-56b0-4244-b6e1-2b5ab4b43fc3"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "7eadcccf-c9c7-4052-b9f0-ccd987f384c4",
+      "variable": "sams",
+      "value": "2",
+      "next": "82d7b431-161e-4d98-8182-5e254bb45104"
+    },
+    {
+      "type": "Branch",
+      "id": "dbc855fe-6e27-494f-91ce-eddee6453024",
+      "variable": "sam4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "924786d6-56b0-4244-b6e1-2b5ab4b43fc3"
+        },
+        {
+          "value": "_default",
+          "target": "7ec442c4-1ec0-4ed7-b0ab-0af440407f5e"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "924786d6-56b0-4244-b6e1-2b5ab4b43fc3",
+      "variable": "sams",
+      "value": "1",
+      "next": "82d7b431-161e-4d98-8182-5e254bb45104"
+    },
+    {
+      "type": "Set",
+      "id": "7ec442c4-1ec0-4ed7-b0ab-0af440407f5e",
+      "variable": "sams",
+      "value": "0",
+      "next": "82d7b431-161e-4d98-8182-5e254bb45104"
+    },
+    {
+      "type": "Branch",
+      "id": "82d7b431-161e-4d98-8182-5e254bb45104",
+      "variable": "danny2",
+      "branches": [
+        {
+          "value": "1",
+          "target": "05956ece-cccd-4237-b5d2-77acce343b48"
+        },
+        {
+          "value": "_default",
+          "target": "b80279b4-e11b-4c20-88ca-dfc45d01dc47"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "453b9b33-6a9d-4a25-8295-8bc1ed6da249",
+      "variable": "danny4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "22b7d1f0-e3f6-47e0-bc48-a7c22101e69f"
+        },
+        {
+          "value": "_default",
+          "target": "38631379-bee3-49fc-ab50-722c205d3fe5"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "22b7d1f0-e3f6-47e0-bc48-a7c22101e69f",
+      "variable": "dannys",
+      "value": "3",
+      "next": "daa66b11-d12f-4f19-9a9b-c36bc68ac5c4"
+    },
+    {
+      "type": "Branch",
+      "id": "b80279b4-e11b-4c20-88ca-dfc45d01dc47",
+      "variable": "danny3",
+      "branches": [
+        {
+          "value": "1",
+          "target": "a449d09d-a9cd-4de8-944d-4390da6fb350"
+        },
+        {
+          "value": "_default",
+          "target": "3975c8e8-e0e7-4836-a307-0c4d8629977c"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "3975c8e8-e0e7-4836-a307-0c4d8629977c",
+      "variable": "danny4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "b34149b5-7b10-4fad-9c60-3bf0f2961368"
+        },
+        {
+          "value": "_default",
+          "target": "5d2986d9-313d-4707-87e1-45faa604c599"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "5d2986d9-313d-4707-87e1-45faa604c599",
+      "variable": "dannys",
+      "value": "0",
+      "next": "daa66b11-d12f-4f19-9a9b-c36bc68ac5c4"
+    },
+    {
+      "type": "Branch",
+      "id": "05956ece-cccd-4237-b5d2-77acce343b48",
+      "variable": "danny3",
+      "branches": [
+        {
+          "value": "1",
+          "target": "453b9b33-6a9d-4a25-8295-8bc1ed6da249"
+        },
+        {
+          "value": "_default",
+          "target": "a449d09d-a9cd-4de8-944d-4390da6fb350"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "38631379-bee3-49fc-ab50-722c205d3fe5",
+      "variable": "dannys",
+      "value": "2",
+      "next": "daa66b11-d12f-4f19-9a9b-c36bc68ac5c4"
+    },
+    {
+      "type": "Branch",
+      "id": "a449d09d-a9cd-4de8-944d-4390da6fb350",
+      "variable": "danny4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "38631379-bee3-49fc-ab50-722c205d3fe5"
+        },
+        {
+          "value": "_default",
+          "target": "b34149b5-7b10-4fad-9c60-3bf0f2961368"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "b34149b5-7b10-4fad-9c60-3bf0f2961368",
+      "variable": "dannys",
+      "value": "1",
+      "next": "daa66b11-d12f-4f19-9a9b-c36bc68ac5c4"
+    },
+    {
+      "type": "Branch",
+      "id": "daa66b11-d12f-4f19-9a9b-c36bc68ac5c4",
+      "variable": "silver2",
+      "branches": [
+        {
+          "value": "1",
+          "target": "71098342-b17a-40dd-b653-44952696d3ff"
+        },
+        {
+          "value": "_default",
+          "target": "3fe7ea87-39ce-457d-a2dd-7afbb0b3dd84"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "71098342-b17a-40dd-b653-44952696d3ff",
+      "variable": "silver3",
+      "branches": [
+        {
+          "value": "1",
+          "target": "9b2e2e6f-081e-4106-9a95-40a17feaaf73"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "9b2e2e6f-081e-4106-9a95-40a17feaaf73",
+      "variable": "silver4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "6bd5f3ac-1a46-4402-9692-b36cdc4e0f20"
+        },
+        {
+          "value": "_default",
+          "target": "4a7ce997-8822-4d0f-81d6-a3082e5573bb"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "6bd5f3ac-1a46-4402-9692-b36cdc4e0f20",
+      "variable": "silvers",
+      "value": "3",
+      "next": "6a8afe03-2b7a-49d8-8a89-b51a4dbaf846"
+    },
+    {
+      "type": "Branch",
+      "id": "3fe7ea87-39ce-457d-a2dd-7afbb0b3dd84",
+      "variable": "silver3",
+      "branches": [
+        {
+          "value": "null",
+          "target": null
+        },
+        {
+          "value": "_default",
+          "target": "9625a53e-1f9e-4d67-b139-997013838fb2"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "9625a53e-1f9e-4d67-b139-997013838fb2",
+      "variable": "silver4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "b5aaff4d-f8f5-45d4-b9a4-0f65b7af7221"
+        },
+        {
+          "value": "_default",
+          "target": "f7d79d5c-1704-432e-910b-d5a8307f8fec"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "f7d79d5c-1704-432e-910b-d5a8307f8fec",
+      "variable": "silvers",
+      "value": "0",
+      "next": "6a8afe03-2b7a-49d8-8a89-b51a4dbaf846"
+    },
+    {
+      "type": "Branch",
+      "id": "d64c1b64-5470-436a-aab6-182ce2d4f95b",
+      "variable": "silver4",
+      "branches": [
+        {
+          "value": "1",
+          "target": "4a7ce997-8822-4d0f-81d6-a3082e5573bb"
+        },
+        {
+          "value": "_default",
+          "target": "b5aaff4d-f8f5-45d4-b9a4-0f65b7af7221"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "d0387698-11dd-4e3a-936a-1177dee70a0e",
+      "variable": "game1Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "3c32c0a6-7dd5-404f-8f45-aefad4ab0a17"
+        },
+        {
+          "value": "_default",
+          "target": "3b7ce08f-fd97-4dee-a7f9-ec078d4d1d65"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "3c32c0a6-7dd5-404f-8f45-aefad4ab0a17",
+      "variable": "game2Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "52a2f812-3cfb-40ed-a4c1-acb984b279db"
+        },
+        {
+          "value": "_default",
+          "target": "d035908c-8eb0-487b-bc84-30cdc186e582"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "52a2f812-3cfb-40ed-a4c1-acb984b279db",
+      "variable": "game3Won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "48df7e6b-c718-4759-8be2-318241289d78"
+        },
+        {
+          "value": "_default",
+          "target": "27d71499-c23f-4f06-8c18-806dae2adf22"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "3b7ce08f-fd97-4dee-a7f9-ec078d4d1d65",
+      "variable": "game2Won",
+      "branches": [
+        {
+          "value": "null",
+          "target": "d035908c-8eb0-487b-bc84-30cdc186e582"
+        },
+        {
+          "value": "_default",
+          "target": "03754a63-c219-47a4-9918-869cbeb8db76"
+        }
+      ]
+    },
+    {
+      "type": "Branch",
+      "id": "03754a63-c219-47a4-9918-869cbeb8db76",
+      "variable": "game3Won",
+      "branches": [
+        {
+          "value": "null",
+          "target": "90748c33-f1bc-4a92-80a1-43e66e7d187e"
+        },
+        {
+          "value": "_default",
+          "target": "5e28ce58-8809-4a39-95fc-2987120e3819"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "5e28ce58-8809-4a39-95fc-2987120e3819",
+      "variable": "games",
+      "value": "0",
+      "next": "a070254c-56dc-4c64-9cb9-c6d5670dbd15"
+    },
+    {
+      "type": "Set",
+      "id": "90748c33-f1bc-4a92-80a1-43e66e7d187e",
+      "variable": "games",
+      "value": "1",
+      "next": "a070254c-56dc-4c64-9cb9-c6d5670dbd15"
+    },
+    {
+      "type": "Set",
+      "id": "48df7e6b-c718-4759-8be2-318241289d78",
+      "variable": "games",
+      "value": "3",
+      "next": "a070254c-56dc-4c64-9cb9-c6d5670dbd15"
+    },
+    {
+      "type": "Branch",
+      "id": "d035908c-8eb0-487b-bc84-30cdc186e582",
+      "variable": "game3Won",
+      "branches": [
+        {
+          "value": "null",
+          "target": "27d71499-c23f-4f06-8c18-806dae2adf22"
+        },
+        {
+          "value": "_default",
+          "target": "90748c33-f1bc-4a92-80a1-43e66e7d187e"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "27d71499-c23f-4f06-8c18-806dae2adf22",
+      "variable": "games",
+      "value": "2",
+      "next": "a070254c-56dc-4c64-9cb9-c6d5670dbd15"
+    },
+    {
+      "type": "Set",
+      "id": "4a7ce997-8822-4d0f-81d6-a3082e5573bb",
+      "variable": "silvers",
+      "value": "2",
+      "next": "6a8afe03-2b7a-49d8-8a89-b51a4dbaf846"
+    },
+    {
+      "type": "Set",
+      "id": "b5aaff4d-f8f5-45d4-b9a4-0f65b7af7221",
+      "variable": "silvers",
+      "value": "1",
+      "next": "6a8afe03-2b7a-49d8-8a89-b51a4dbaf846"
+    },
+    {
+      "type": "Text",
+      "id": "6a8afe03-2b7a-49d8-8a89-b51a4dbaf846",
+      "actor": "Tory Narra",
+      "name": "Let's see who's the most love struck!\n$sams good vibes from Sam,\n$dannys good vibes from Danny,\n$silvers good vibes from Silver Spark!--",
+      "next": "d0387698-11dd-4e3a-936a-1177dee70a0e"
+    },
+    {
+      "type": "Text",
+      "id": "a070254c-56dc-4c64-9cb9-c6d5670dbd15",
+      "actor": "Tory Narra",
+      "name": "And you won $games games.",
+      "next": "87a12ffe-d27e-485d-8195-e9afe7f81dd6"
+    },
+    {
+      "type": "Text",
+      "id": "87a12ffe-d27e-485d-8195-e9afe7f81dd6",
+      "actor": "Tory Narra",
+      "name": "Hey Gen Erico! I'm glad you came to the after party!!!",
+      "choices": [ "1b1884bf-7294-4a88-bf91-08405741d4d1", "782c4e1f-5baa-422f-a935-d024cabd7b47" ]
+    },
+    {
+      "type": "Choice",
+      "id": "1b1884bf-7294-4a88-bf91-08405741d4d1",
+      "title": "I figured I should come.",
+      "name": "Everyone else is gonna be here, and it's not like I've got anything else going on tonight.",
+      "next": null
+    },
+    {
+      "type": "Choice",
+      "id": "782c4e1f-5baa-422f-a935-d024cabd7b47",
+      "title": "Of course",
+      "name": "I wouldn't miss it for the world. This was a great season, and I wanted to say bye to everyone.",
+      "next": "c88ca410-8305-4767-ac79-b833e2a686bf"
+    },
+    {
+      "type": "Set",
+      "id": "c88ca410-8305-4767-ac79-b833e2a686bf",
+      "variable": "confidance2",
+      "value": "1",
+      "next": "b1400e65-15bd-4eed-bff2-082301bbcff6"
+    },
+    {
+      "type": "Text",
+      "id": "b1400e65-15bd-4eed-bff2-082301bbcff6",
+      "actor": "Tory Narra",
+      "name": "Yeah! Everyone came. this is gonna be so great.",
+      "next": "14a86b7b-51b7-4ad7-9bdb-08e492af3881"
+    },
+    {
+      "type": "Text",
+      "id": "245ec01d-1d61-43d1-9588-9a2b9e6e94d2",
+      "actor": "Tory Narra",
+      "name": "Oh come on!!! It'll be great!!! You better not feel that way when talking to someone you're in love with if you want them to love you too!!!",
+      "next": "14a86b7b-51b7-4ad7-9bdb-08e492af3881"
+    },
+    {
+      "type": "Action",
+      "id": "b479f1d3-c239-4715-97b0-6dd22cf35cd2",
+      "actor": "",
+      "uniquename": "emote",
+      "next": "245ec01d-1d61-43d1-9588-9a2b9e6e94d2"
+    },
+    {
+      "type": "Set",
+      "id": "05ad98cd-3982-4220-b673-490aa4815ef3",
+      "variable": "emote",
+      "value": "toryAnnoyed",
+      "next": "b479f1d3-c239-4715-97b0-6dd22cf35cd2"
+    },
+    {
+      "type": "Set",
+      "id": "14a86b7b-51b7-4ad7-9bdb-08e492af3881",
+      "variable": "emote",
+      "value": "toryConfident",
+      "next": "bba5169e-15b0-49e2-b084-eefe716c32bf"
+    },
+    {
+      "type": "Action",
+      "id": "bba5169e-15b0-49e2-b084-eefe716c32bf",
+      "actor": "",
+      "uniquename": "emote",
+      "next": null
+    },
+    {
+      "type": "Text",
+      "id": "c39561eb-5caf-4d93-b395-6fb63f87342a",
+      "actor": "Tory Narra",
+      "name": "Attention Everyone!!!!",
+      "next": "2b4b1b77-1143-4894-8978-6e19d8f07880"
+    },
+    {
+      "type": "Text",
+      "id": "2b4b1b77-1143-4894-8978-6e19d8f07880",
+      "actor": "Tory Narra",
+      "name": "Thank you all for coming to the end of season After Party!!!\nThis season's winners are....",
+      "next": "c688ddd7-19ea-4188-a37f-03556e65f629"
+    },
+    {
+      "type": "Branch",
+      "id": "5064e361-189d-48f6-8242-e83793ee94d9",
+      "variable": "games",
+      "branches": [
+        {
+          "value": "2",
+          "target": "c3e42068-480d-46c8-a676-13c66fe68256"
+        },
+        {
+          "value": "3",
+          "target": "c3e42068-480d-46c8-a676-13c66fe68256"
+        },
+        {
+          "value": "_default",
+          "target": "ea4e33c7-cc13-4998-a275-14e95b680322"
+        }
+      ]
+    },
+    {
+      "type": "Set",
+      "id": "c3e42068-480d-46c8-a676-13c66fe68256",
+      "variable": "won",
+      "value": "1",
+      "next": "4c3206c1-195b-4d12-bc6f-4fda65ad910c"
+    },
+    {
+      "type": "Text",
+      "id": "4c3206c1-195b-4d12-bc6f-4fda65ad910c",
+      "actor": "Tory Narra",
+      "name": "\nASSA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "next": "75e31689-2503-4e07-8346-c256ecab4aa9"
+    },
+    {
+      "type": "Text",
+      "id": "c688ddd7-19ea-4188-a37f-03556e65f629",
+      "actor": "",
+      "name": "TEAM....",
+      "next": "5064e361-189d-48f6-8242-e83793ee94d9"
+    },
+    {
+      "type": "Text",
+      "id": "ea4e33c7-cc13-4998-a275-14e95b680322",
+      "actor": "Tory Narra",
+      "name": "\nCOSMOKNOTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "next": "32838bca-b204-4d15-8fd4-d0c542239574"
+    },
+    {
+      "type": "Text",
+      "id": "32838bca-b204-4d15-8fd4-d0c542239574",
+      "actor": "Tory Narra",
+      "name": "Let's all give a big, congratulatory round of applause for team Cosmoknots!!!!",
+      "next": "3706db76-e3fd-48a6-9544-55db7c265328"
+    },
+    {
+      "type": "Text",
+      "id": "75e31689-2503-4e07-8346-c256ecab4aa9",
+      "actor": "Tory Narra",
+      "name": "Let's all give a big, congratulatory round of applause for team ASSA!!!!!!!!!!!",
+      "next": "3706db76-e3fd-48a6-9544-55db7c265328"
+    },
+    {
+      "type": "Text",
+      "id": "3706db76-e3fd-48a6-9544-55db7c265328",
+      "actor": "Tory Narra",
+      "name": "Alright Gen, now's your chance. Everyone's gotten comfortable, go ask someone out on a date!!!",
+      "next": "c70a452e-43d0-465f-bb5b-1460be2a30b4"
+    },
+    {
+      "type": "Choice",
+      "id": "c27a5c2c-3f3b-4176-bb68-3b7fbf80b307",
+      "title": "Ask Out Sam Hedgehog",
+      "name": "He's super interesting. Some say he's the quickest thing breathing! He'll certainly keep you quick on your feet!",
+      "next": "b7f5a69f-2127-49c5-a3a3-26e2c69c4011"
+    },
+    {
+      "type": "Choice",
+      "id": "7e86a9e4-cbc0-4540-be81-0f6095fb4329",
+      "title": "Ask out Dark SilverSpark",
+      "name": "She's the complete package! cute, and a great soccer player. She may be tough nut to crack, but once she loves you, she'll love you forever!",
+      "next": "115961d3-50a5-4c58-bf16-3b1a2824c5b6"
+    },
+    {
+      "type": "Choice",
+      "id": "e7b66def-5e80-404e-aaa4-69db496c61f3",
+      "title": "Ask Out Danny Lover",
+      "name": "He's a model man and a trophy husband! Loyal, sweet, everything you could ever want in a guy!",
+      "next": "d3c8a5ee-2626-42f0-adf5-fc5bc1a8e163"
+    },
+    {
+      "type": "Text",
+      "id": "c70a452e-43d0-465f-bb5b-1460be2a30b4",
+      "actor": "Tory Narra",
+      "name": "Just remember everything you learned from each of them. Some like a fast footed soccer stud, and some like a sweetheart, and maybe they like both!",
+      "choices": [ "c27a5c2c-3f3b-4176-bb68-3b7fbf80b307", "e7b66def-5e80-404e-aaa4-69db496c61f3", "7e86a9e4-cbc0-4540-be81-0f6095fb4329" ]
+    },
+    {
+      "type": "Text",
+      "id": "b7f5a69f-2127-49c5-a3a3-26e2c69c4011",
+      "actor": "Sam Hedgehog",
+      "name": "Hey Gen, what's kickin?",
+      "choices": [ "b9b74281-b9a1-4450-bf5b-d67d3bf9ca7f", "a32b2679-b5d4-4ceb-b88a-9e5edd2bcf2a" ]
+    },
+    {
+      "type": "Choice",
+      "id": "a32b2679-b5d4-4ceb-b88a-9e5edd2bcf2a",
+      "title": "Ask Him Out!",
+      "name": "Hey Sam, I wondering if you, maybe, would like to got out, you know, like be my boyfriend!",
+      "next": "877e6b94-f1fa-4157-bcca-68c3fac5396c"
+    },
+    {
+      "type": "Choice",
+      "id": "b9b74281-b9a1-4450-bf5b-d67d3bf9ca7f",
+      "title": "Bail!!!!!!",
+      "name": "Oh nothing, I was just seeing what's up!",
+      "next": "5605e1ca-d17e-4dc3-ab1f-7ee39d7e0f68"
+    },
+    {
+      "type": "Text",
+      "id": "5605e1ca-d17e-4dc3-ab1f-7ee39d7e0f68",
+      "actor": "Tory Narra",
+      "name": "Oh you bailed! That's okay, nothing wrong with that, but if you want someone to date, try again!",
+      "next": "c70a452e-43d0-465f-bb5b-1460be2a30b4"
+    },
+    {
+      "type": "Branch",
+      "id": "877e6b94-f1fa-4157-bcca-68c3fac5396c",
+      "variable": "won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "ea92f989-8542-4ac3-9a8c-1b247d4ce295"
+        },
+        {
+          "value": "_default",
+          "target": "64409a92-c992-478b-b99c-de52fb02fda6"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "ea92f989-8542-4ac3-9a8c-1b247d4ce295",
+      "actor": "Sam Hedgehog",
+      "name": "Awww well, how do I say this, Gen?\nI just ... Sorry But\nYou know I think your real cool and all, but I think we're- are running at two different speeds here!",
+      "next": "2a5713f1-cdfb-4c13-b45d-1694e84c4404"
+    },
+    {
+      "type": "Text",
+      "id": "2a5713f1-cdfb-4c13-b45d-1694e84c4404",
+      "actor": "Tory Narra",
+      "name": "Awwwwwwwwwwwwwwwwwwwwwww\nRejection hurts and I'm sorry. I know you tried really hard!\nMaybe you should try again!!!",
+      "choices": [ "f045cae0-a945-4efe-9bdb-4f5ee3111855", "0c4d00b2-f11d-42da-a065-26dfb4b656ed" ]
+    },
+    {
+      "type": "Choice",
+      "id": "f045cae0-a945-4efe-9bdb-4f5ee3111855",
+      "title": "Try again!",
+      "name": "I'm gonna get back in there. If Sam doesn't love me, maybe someday, someone else will!",
+      "next": "c70a452e-43d0-465f-bb5b-1460be2a30b4"
+    },
+    {
+      "type": "Choice",
+      "id": "0c4d00b2-f11d-42da-a065-26dfb4b656ed",
+      "title": "No! I quit",
+      "name": "Love is the hardest game I ever played, and I beat Dark Souls!!!\nScrew these 3D people I'll never have a chance with any of them!",
+      "next": "f4439e55-1f7f-4721-8501-e96218cf6b22"
+    },
+    {
+      "type": "Text",
+      "id": "f4439e55-1f7f-4721-8501-e96218cf6b22",
+      "actor": "Tory Narra",
+      "name": "Are you sure?",
+      "choices": [ "4effd31a-5fed-426a-b599-f165fb3bd4b4", "434a395b-d333-42c9-8ded-5bb185a786e5" ]
+    },
+    {
+      "type": "Choice",
+      "id": "4effd31a-5fed-426a-b599-f165fb3bd4b4",
+      "title": "No!",
+      "name": "I was just acting irrational!\nI'm gonna find myself a date!",
+      "next": "c70a452e-43d0-465f-bb5b-1460be2a30b4"
+    },
+    {
+      "type": "Choice",
+      "id": "434a395b-d333-42c9-8ded-5bb185a786e5",
+      "title": "YES!!!!",
+      "name": "I hate soccer, and I hate dating even more!",
+      "next": "f681b606-1898-466c-8762-1a354d6e94a2"
+    },
+    {
+      "type": "Text",
+      "id": "f681b606-1898-466c-8762-1a354d6e94a2",
+      "actor": "Tory Narra",
+      "name": "That Night, Gen checked out of normal life. They went home and spent the rest of their money on a new body pillow of their favorite anime character.",
+      "next": "327703bf-90c7-4a96-baa8-b717b1634531"
+    },
+    {
+      "type": "Text",
+      "id": "327703bf-90c7-4a96-baa8-b717b1634531",
+      "actor": "Tory Narra",
+      "name": "From now on, their days consisted of watching anime, playing dating simulators and other video games, and arguing with people on 4Chan about who is \"best girl\".",
+      "next": "ecaa41a1-a6ef-44e7-aca1-5f8cd56633c4"
+    },
+    {
+      "type": "Text",
+      "id": "ecaa41a1-a6ef-44e7-aca1-5f8cd56633c4",
+      "actor": "Tory Narra",
+      "name": "and worst of all, they died, never getting to hold hands with another person.\n",
+      "next": "f2d3f96f-786f-4b86-b20d-236bf7c5117e"
+    },
+    {
+      "type": "Text",
+      "id": "f2d3f96f-786f-4b86-b20d-236bf7c5117e",
+      "actor": "Tory Narra",
+      "name": "THE END!!!!",
+      "next": "9ff6627c-437a-405f-932a-f49609ab70d2"
+    },
+    {
+      "type": "Text",
+      "id": "9ff6627c-437a-405f-932a-f49609ab70d2",
+      "actor": "Tory Narra",
+      "name": "Thanks for playing!",
+      "next": null
+    },
+    {
+      "type": "Branch",
+      "id": "64409a92-c992-478b-b99c-de52fb02fda6",
+      "variable": "sams",
+      "branches": [
+        {
+          "value": "0",
+          "target": "ea92f989-8542-4ac3-9a8c-1b247d4ce295"
+        },
+        {
+          "value": "_default",
+          "target": "94f28e67-189a-422e-af4e-2f0644c34673"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "94f28e67-189a-422e-af4e-2f0644c34673",
+      "actor": "Sam Hedgehog",
+      "name": "Well, you sure beat me!\nGen I think you're real swell!!! I'd love to!\nWhat do you say we blow this join and go get that Jelly Doughnut now!",
+      "next": "305390c6-f731-4f7f-9d1b-98b56f5379df"
+    },
+    {
+      "type": "Action",
+      "id": "305390c6-f731-4f7f-9d1b-98b56f5379df",
+      "actor": "",
+      "uniquename": "gameEnd",
+      "next": null
+    },
+    {
+      "type": "Branch",
+      "id": "d3c8a5ee-2626-42f0-adf5-fc5bc1a8e163",
+      "variable": "won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "fa02c207-a7a5-47c8-aa24-ad994b6fd46e"
+        },
+        {
+          "value": "_default",
+          "target": "654ae5f5-618f-4230-89fe-1d83ad6e892a"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "fa02c207-a7a5-47c8-aa24-ad994b6fd46e",
+      "actor": "Danny Lover",
+      "name": "Oh hey Gen! I'm stoked on that victory. I didn't think we could go it. The Cosmoknots are a force to be wreckened with!",
+      "choices": [ "04009641-5396-4f3b-a8a1-5f5da64e22cb", "ca30a67c-70e7-4784-ad2d-c038ea393ebd" ]
+    },
+    {
+      "type": "Text",
+      "id": "654ae5f5-618f-4230-89fe-1d83ad6e892a",
+      "actor": "Danny Lover",
+      "name": "Hey Gen. This was a great season! It sucks that we didn't win, but we'll show 'em next time!",
+      "choices": [ "ca30a67c-70e7-4784-ad2d-c038ea393ebd", "04009641-5396-4f3b-a8a1-5f5da64e22cb" ]
+    },
+    {
+      "type": "Choice",
+      "id": "ca30a67c-70e7-4784-ad2d-c038ea393ebd",
+      "title": "Ask Him Out!",
+      "name": "Hey Danny, I wondering if you, maybe, would like to got out, you know, like be my boyfriend!",
+      "next": "60c255e6-575a-44c8-91ab-7c66d59f257e"
+    },
+    {
+      "type": "Choice",
+      "id": "04009641-5396-4f3b-a8a1-5f5da64e22cb",
+      "title": "Bail!!!!!!",
+      "name": "Oh nothing, I was just seeing what's up!",
+      "next": "529953b6-0191-4e41-be52-7aa3690b58bb"
+    },
+    {
+      "type": "Text",
+      "id": "529953b6-0191-4e41-be52-7aa3690b58bb",
+      "actor": "Danny Lover",
+      "name": "Okay, well, cya later!!!",
+      "next": "c70a452e-43d0-465f-bb5b-1460be2a30b4"
+    },
+    {
+      "type": "Branch",
+      "id": "60c255e6-575a-44c8-91ab-7c66d59f257e",
+      "variable": "dannys",
+      "branches": [
+        {
+          "value": "2",
+          "target": "abd2dd23-a765-4eda-9597-ca6ad1bf4976"
+        },
+        {
+          "value": "3",
+          "target": "abd2dd23-a765-4eda-9597-ca6ad1bf4976"
+        },
+        {
+          "value": "_default",
+          "target": "86321855-8402-46be-9230-d82edab99d00"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "86321855-8402-46be-9230-d82edab99d00",
+      "actor": "Danny Lover",
+      "name": "Oh sorry Gen. I had no idea you fealt this way. I think you're great and all, but, it's just that, I'm in love with Aarin Aangrump. I was gonna ask her out tonight.-",
+      "next": "2a5713f1-cdfb-4c13-b45d-1694e84c4404"
+    },
+    {
+      "type": "Text",
+      "id": "abd2dd23-a765-4eda-9597-ca6ad1bf4976",
+      "actor": "Danny Lover",
+      "name": "Gen, I'd absolutely love to go out with you. I think great, and we'll make an even greater couple!!!!",
+      "next": "7a8eefaa-54f6-4f0c-92ca-b7b2557617cd"
+    },
+    {
+      "type": "Text",
+      "id": "7a8eefaa-54f6-4f0c-92ca-b7b2557617cd",
+      "actor": "Danny Lover",
+      "name": "After the party, we should totally hang out together!",
+      "next": "9b0ce0a6-1ed1-4dea-b32d-a5e58c764bf9"
+    },
+    {
+      "type": "Action",
+      "id": "9b0ce0a6-1ed1-4dea-b32d-a5e58c764bf9",
+      "actor": "",
+      "uniquename": "endGame",
+      "next": null
+    },
+    {
+      "type": "Branch",
+      "id": "115961d3-50a5-4c58-bf16-3b1a2824c5b6",
+      "variable": "won",
+      "branches": [
+        {
+          "value": "1",
+          "target": "17b8f314-5728-475e-8a11-8150b67b7ca3"
+        },
+        {
+          "value": "_default",
+          "target": "c214da65-2a8e-4ce8-bc14-23af19256a0b"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "17b8f314-5728-475e-8a11-8150b67b7ca3",
+      "actor": "Dark SilverSpark",
+      "name": "Hey Gen. What are YOU doing over here? Shouldn't you be chatting with your winning team? \n",
+      "choices": [ "4a7696f4-e395-47a5-b0dd-0bc2a306fa5b", "c34b984f-f166-496e-878a-82a4c7386ea2" ]
+    },
+    {
+      "type": "Text",
+      "id": "c214da65-2a8e-4ce8-bc14-23af19256a0b",
+      "actor": "Dark SilverSpark",
+      "name": "Oh hey Gen! Didja come here to congratulate me?",
+      "choices": [ "4a7696f4-e395-47a5-b0dd-0bc2a306fa5b", "c34b984f-f166-496e-878a-82a4c7386ea2" ]
+    },
+    {
+      "type": "Choice",
+      "id": "c34b984f-f166-496e-878a-82a4c7386ea2",
+      "title": "Ask ",
+      "name": "Hey SilverSpark, I was wondering if you, maybe, would like to got out, you know, like be my girlfriend!",
+      "next": null
+    },
+    {
+      "type": "Choice",
+      "id": "4a7696f4-e395-47a5-b0dd-0bc2a306fa5b",
+      "title": "Bail!!!!!!",
+      "name": "Oh nothing, I was just seeing what's up!",
+      "next": "0789944c-cf80-4003-ab0b-f04c849ec883"
+    },
+    {
+      "type": "Text",
+      "id": "0789944c-cf80-4003-ab0b-f04c849ec883",
+      "actor": "Dark SilverSpark",
+      "name": "Oh, I see how it is. I think YOU like me! Is that it?  Go on, ask me out!",
+      "choices": [ "c34b984f-f166-496e-878a-82a4c7386ea2", "6f32593d-0ff6-46ab-89c7-665a0b8be18d" ]
+    },
+    {
+      "type": "Choice",
+      "id": "6f32593d-0ff6-46ab-89c7-665a0b8be18d",
+      "title": "What???",
+      "name": "No! Seriously, I just wanted to see what was going on!",
+      "next": "563df3bc-609a-4b4b-9dec-4800cb5f0824"
+    },
+    {
+      "type": "Text",
+      "id": "563df3bc-609a-4b4b-9dec-4800cb5f0824",
+      "actor": "Dark SilverSpark",
+      "name": "Well, I'm on to you!\nAnyway, Cya later!",
+      "next": "c70a452e-43d0-465f-bb5b-1460be2a30b4"
+    },
+    {
+      "type": "Branch",
+      "id": "14995c1d-d79e-407f-a1a1-af6c9f293a96",
+      "variable": "silverSparkNeg",
+      "branches": [
+        {
+          "value": "1",
+          "target": "c2017f39-fdd3-4e74-bebc-84454ee7ac6b"
+        },
+        {
+          "value": "_default",
+          "target": "dba89edb-e6e7-41d4-9da5-8b284f63d4f1"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "c2017f39-fdd3-4e74-bebc-84454ee7ac6b",
+      "actor": "Dark SilverSpark",
+      "name": "Oh gosh, this is awkward! I'm not really into you. ",
+      "next": "9856d99e-d3db-4abc-b2b6-03b4db5a74fd"
+    },
+    {
+      "type": "Text",
+      "id": "9856d99e-d3db-4abc-b2b6-03b4db5a74fd",
+      "actor": "Dark SilverSpark",
+      "name": " I want someone who I can relate to, and someone who can score a goal, and run back to sweep me off my feet. I like Sam\nUmmm. sorry?",
+      "next": "2a5713f1-cdfb-4c13-b45d-1694e84c4404"
+    },
+    {
+      "type": "Branch",
+      "id": "dba89edb-e6e7-41d4-9da5-8b284f63d4f1",
+      "variable": "silvers",
+      "branches": [
+        {
+          "value": "2",
+          "target": "75178521-9cb8-4a49-b9cc-a1a82e78ea30"
+        },
+        {
+          "value": "3",
+          "target": "75178521-9cb8-4a49-b9cc-a1a82e78ea30"
+        },
+        {
+          "value": "_default",
+          "target": "c2017f39-fdd3-4e74-bebc-84454ee7ac6b"
+        }
+      ]
+    },
+    {
+      "type": "Text",
+      "id": "75178521-9cb8-4a49-b9cc-a1a82e78ea30",
+      "actor": "Dark SilverSpark",
+      "name": "Oh my gosh!\nI hope you can't see me blushing right now!",
+      "next": "6060d9d0-53db-4cf0-a7e3-72e02ff389de"
+    },
+    {
+      "type": "Text",
+      "id": "6060d9d0-53db-4cf0-a7e3-72e02ff389de",
+      "actor": "Dark SilverSpark",
+      "name": "Truth is, I've had a crush on you for a long time! Wow, I just don't know what to say. I'm sorry I'd teased you so much!\nLets get outta here!",
+      "next": "c4f1580f-b3d8-4688-b251-9cce4002277f"
+    },
+    {
+      "type": "Text",
+      "id": "c4f1580f-b3d8-4688-b251-9cce4002277f",
+      "actor": "Dark SilverSpark",
+      "name": "One day, you're gonna carry me to victory, and our team will totally destroy the world cup!",
+      "next": null
+    },
+    {
+      "type": "Text",
+      "id": "4e0201a4-a98d-41b2-b60d-347c4cfeaf11",
+      "actor": "Tory Nara",
+      "name": "Here we go! If you want Sam or Silver, you better win this one!0-",
+      "next": "30bfa2ca-a216-428e-8ccd-c8c7ef44e1c6"
+    }
+  ]
+}

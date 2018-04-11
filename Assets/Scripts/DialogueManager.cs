@@ -77,6 +77,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueSession.currentID != null)
         {
+            Debug.Log(dialogueSession.currentID);
             DialogueNode dialogueNode = dialogueSession.dialogueNodes[dialogueSession.currentID];
             if (dialogueNode is TextDialogueNode)
             {
